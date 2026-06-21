@@ -46,7 +46,7 @@ button:active{
         0 0 60px orange;
 }
 .marco{
-    width: 500px;
+    width: min(500px, 90%);
     margin: 50px auto;
     padding: 20px;
 
@@ -58,25 +58,12 @@ button:active{
     color: white;
     text-align: center;
 }
-.contenedor{
-    width: 90%;
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-
-    padding-top: 50px;
-}
-
 .principal{
     grid-column: 1 / 3;
 
     justify-self: center;
 
-    width: 600px;
+    width: min(600px, 95%);
 }
 header{
     min-height: 100vh;
@@ -85,9 +72,11 @@ header{
     box-sizing: border-box;
 }
 .hoja{
-    min-height: 100vh;
 
-    padding: 80px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
 
     box-sizing: border-box;
 
@@ -143,7 +132,7 @@ ul{
 }
 
 li{
-    margin: 100px 0;
+    margin: 10px 0;
 }
 
 a{
@@ -225,4 +214,99 @@ a{
     color: gold;
 
     margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+/* ===== RESPONSIVE CELULAR ===== */
+
+@media (max-width: 768px){
+
+    body{
+        border-left: 4px solid gold;
+        border-right: 4px solid gold;
+    }
+
+    header{
+        min-height: auto;
+        padding: 20px 10px;
+    }
+
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marco{
+        width: 90%;
+        max-width: 350px;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .principal{
+        width: 95%;
+        max-width: 400px;
+    }
+
+    button{
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .hoja{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .hoja h2{
+        font-size: 28px;
+    }
+
+    .hoja p{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .lista,
+    .lista2{
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .lista > li,
+    .lista2 > li{
+        margin-bottom: 20px;
+        padding-left: 12px;
+    }
+
+    li{
+        margin: 15px 0;
+    }
+
+    .navegacion{
+        gap: 10px;
+    }
+
+    .navegacion a{
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    iframe,
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
