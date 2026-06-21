@@ -10,22 +10,25 @@
 
 html{
     scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
 }
 
 body{
     background:#111;
     color:white;
     font-family:Arial, sans-serif;
-    line-height:1.7;
-
-    border-left:4px solid gold;
-    border-right:4px solid gold;
+    line-height:1.8;
 
     min-height:100vh;
+
+    border-left:3px solid gold;
+    border-right:3px solid gold;
+
+    overflow-x:hidden;
 }
 
 /* ========================= */
-/* LINKS */
+/* ENLACES */
 /* ========================= */
 
 a{
@@ -43,65 +46,63 @@ a:hover{
 /* ========================= */
 
 header{
-    padding:30px 15px;
+    padding:20px 10px;
 }
 
 .contenedor{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+    gap:15px;
 }
 
 /* ========================= */
-/* TARJETAS DEL MENU */
+/* TARJETAS */
 /* ========================= */
 
 .marco{
-    width:320px;
+    width:100%;
+    max-width:350px;
+
+    padding:10px;
 
     border:3px solid gold;
     border-radius:15px;
 
     background:rgba(255,215,0,.05);
 
-    box-shadow:
-        0 0 10px rgba(255,215,0,.15);
-
     transition:.3s;
-
-    text-align:center;
 }
 
 .marco:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 0 15px rgba(255,215,0,.35);
+        0 0 10px rgba(255,215,0,.4);
 }
 
 .principal{
-    width:500px;
+    max-width:500px;
 }
 
 button{
     width:100%;
 
-    padding:18px;
+    padding:15px;
 
-    border:none;
     background:none;
+    border:none;
 
     color:gold;
 
-    font-size:17px;
+    font-size:16px;
     font-weight:bold;
 
     cursor:pointer;
 }
 
 /* ========================= */
-/* BOTON MENU */
+/* BOTÓN VOLVER */
 /* ========================= */
 
 header > a{
@@ -109,7 +110,7 @@ header > a{
 
     margin-top:20px;
 
-    padding:12px 20px;
+    padding:10px 15px;
 
     border:2px solid gold;
     border-radius:10px;
@@ -120,23 +121,25 @@ header > a{
 /* ========================= */
 
 .hoja{
-    width:min(95%, 1100px);
+    width:min(95%,1200px);
 
-    margin:30px auto;
+    margin:20px auto;
 
-    padding:30px;
+    padding:20px;
 
     background:rgba(255,255,255,.02);
 
-    border:1px solid rgba(255,215,0,.25);
+    border:1px solid rgba(255,215,0,.2);
 
     border-radius:15px;
+
+    overflow:hidden;
 }
 
 .hoja h2{
-    color:gold;
-
     text-align:center;
+
+    color:gold;
 
     margin-bottom:25px;
 
@@ -151,26 +154,34 @@ header > a{
     margin-bottom:20px;
 
     text-align:left;
+
+    overflow-wrap:break-word;
 }
 
 /* ========================= */
 /* LISTAS */
 /* ========================= */
 
+ul{
+    margin:20px 0;
+}
+
 .lista,
 .lista2{
     list-style:none;
 
-    margin:25px 0;
+    width:100%;
 }
 
-.lista li,
-.lista2 li{
+.lista > li,
+.lista2 > li{
     border-left:4px solid gold;
 
     padding-left:15px;
 
     margin-bottom:20px;
+
+    overflow-wrap:break-word;
 }
 
 .lista ul,
@@ -180,7 +191,7 @@ header > a{
 }
 
 /* ========================= */
-/* NAVEGACION ENTRE SECCIONES */
+/* NAVEGACIÓN */
 /* ========================= */
 
 .navegacion{
@@ -199,12 +210,36 @@ header > a{
     border:1px solid gold;
     border-radius:8px;
 
+    text-align:center;
+
     transition:.3s;
 }
 
 .navegacion a:hover{
     background:gold;
     color:black;
+}
+
+/* ========================= */
+/* MULTIMEDIA */
+/* ========================= */
+
+img,
+iframe,
+video{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* ========================= */
+/* TABLAS */
+/* ========================= */
+
+table{
+    width:100%;
+    display:block;
+    overflow-x:auto;
 }
 
 /* ========================= */
@@ -218,33 +253,22 @@ header > a{
         border-right:2px solid gold;
     }
 
-    header{
-        padding:15px 10px;
-    }
-
     .contenedor{
         flex-direction:column;
         align-items:center;
-        gap:12px;
     }
 
-    .marco,
+    .marco{
+        max-width:100%;
+    }
+
     .principal{
-        width:100%;
-        max-width:400px;
-    }
-
-    button{
-        padding:15px;
-        font-size:15px;
+        max-width:100%;
     }
 
     .hoja{
         width:95%;
-
-        padding:20px 15px;
-
-        margin:20px auto;
+        padding:15px;
     }
 
     .hoja h2{
@@ -253,13 +277,11 @@ header > a{
 
     .hoja p{
         font-size:.95rem;
-        line-height:1.8;
     }
 
-    .lista li,
-    .lista2 li{
-        font-size:.95rem;
-        margin-bottom:15px;
+    .lista > li,
+    .lista2 > li{
+        padding-left:12px;
     }
 
     .navegacion{
@@ -268,6 +290,5 @@ header > a{
 
     .navegacion a{
         width:100%;
-        text-align:center;
     }
 }
