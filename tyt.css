@@ -209,3 +209,27 @@ a{
 img{
     display:block;
 }
+/* ========================= */
+/* VISTA EN CELULAR */
+/* ========================= */
+@media (max-width: 768px) {
+    .hoja {
+        min-height: 100vh;   /* cada hoja ocupa toda la pantalla */
+        padding: 30px 15px;
+        scroll-snap-align: start; /* se alinea al inicio al hacer scroll */
+    }
+
+    body {
+        scroll-snap-type: y mandatory; /* activa el efecto de “páginas” */
+        overflow-y: scroll;
+    }
+
+    .menu-imagenes {
+        flex-direction: column; /* las cards una debajo de la otra */
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
