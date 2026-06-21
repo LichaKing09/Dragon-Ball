@@ -2,162 +2,210 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     background:#111;
     color:white;
     font-family:Arial,sans-serif;
 
-    border-left:8px solid gold;
-    border-right:8px solid gold;
+    border-left:2px solid gold;
+    border-right:2px solid gold;
 
-    box-shadow:
-        inset 15px 0 25px rgba(255,215,0,.35),
-        inset -15px 0 25px rgba(255,215,0,.35);
+    overflow-x:hidden;
 }
 
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
 header{
-    text-align:center;
-    padding:50px 20px;
+    padding:20px 10px;
 }
 
 header h1{
     color:gold;
-    font-size:3rem;
+    text-align:center;
+
+    font-size:1.8rem;
+
+    margin-bottom:25px;
 
     text-shadow:
-        0 0 10px gold,
-        0 0 25px orange;
+    0 0 10px gold,
+    0 0 20px orange;
 }
+
+/* ========================= */
+/* MENU DE IMAGENES */
+/* ========================= */
 
 .menu-imagenes{
     display:flex;
-    justify-content:center;
-    gap:80px;
-    flex-wrap:wrap;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    width:100%;
 }
 
 .card{
+    width:48%;
     text-align:center;
 }
 
 .card h2{
     color:gold;
+    font-size:1rem;
+
+    margin-bottom:8px;
 }
 
 .card img{
-    width:350px;
-    border-radius:15px;
+    width:100%;
+    height:180px;
 
-    transition:.3s;
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:2px solid gold;
+
+    display:block;
 }
 
-.card img:hover{
-    transform:scale(1.05);
-
-    box-shadow:
-        0 0 15px gold,
-        0 0 35px orange;
+.card img:active{
+    transform:scale(.97);
 }
+
+/* ========================= */
+/* BOTON MENU */
+/* ========================= */
+
+.marco{
+    display:block;
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border:2px solid gold;
+
+    border-radius:12px;
+
+    background:rgba(255,215,0,.08);
+
+    text-align:center;
+
+    color:white;
+
+    text-decoration:none;
+}
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
 
 .hoja{
-    padding:80px 40px;
+    padding:20px 10px;
 }
 
 .hoja h2{
-    text-align:center;
     color:gold;
-    font-size:2.5rem;
+
+    text-align:center;
+
+    font-size:1.7rem;
+
+    margin-bottom:20px;
 }
 
+/* ========================= */
+/* RAZAS */
+/* ========================= */
+
 .raza{
-    padding:25px;
-    margin:25px 0;
+    margin:20px 0;
 }
 
 .raza h3{
-    text-align:center;
-
     color:orange;
 
-    font-size:36px;
+    text-align:center;
 
-    margin-bottom:50px;
+    font-size:1.4rem;
 
-    text-shadow:
-        0 0 10px orange,
-        0 0 20px gold;
+    margin-bottom:15px;
 }
+
+.raza p{
+    line-height:1.8;
+}
+
+/* ========================= */
+/* TRANSFORMACIONES */
+/* ========================= */
 
 .transformacion{
     background:rgba(255,255,255,.03);
 
     border:2px solid gold;
 
-    border-radius:15px;
+    border-radius:12px;
 
-    padding:25px;
+    padding:15px;
 
-    margin:25px 0;
-
-    transition:.3s;
-}
-
-.transformacion:hover{
-    transform:translateY(-5px);
-
-    box-shadow:
-        0 0 15px gold,
-        0 0 30px orange;
+    margin-bottom:15px;
 }
 
 .transformacion h4{
-    text-align:center;
-
     color:gold;
 
-    font-size:28px;
+    text-align:center;
+
+    font-size:1.2rem;
+
+    margin-bottom:10px;
 }
 
 .transformacion h5{
     color:orange;
-    margin-top:20px;
+
+    margin-top:15px;
+    margin-bottom:8px;
 }
 
 .transformacion p{
-    line-height:1.8;
+    line-height:1.7;
 }
 
 .transformacion ul{
-    line-height:1.8;
+    padding-left:18px;
 }
 
 .transformacion li{
     margin-bottom:8px;
+    line-height:1.6;
 }
 
+/* ========================= */
+/* LINKS */
+/* ========================= */
+
 a{
+    color:gold;
     text-decoration:none;
 }
 
 img{
-    cursor:pointer;
-}
-.raza > p{
-    text-align:justify;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-.marco{
-    width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-
-    border: 5px solid gold;
-    border-radius: 15px;
-
-    background-color: rgba(0, 0, 0, 0.7);
-
-    color: white;
-    text-align: center;
+    display:block;
 }
