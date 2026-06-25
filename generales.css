@@ -207,3 +207,20 @@ a:hover{
 .transformacion li{
     margin-bottom:8px;
 }
+.raza{
+    margin:20px 0;
+}
+
+.raza h3{
+    color:orange;
+
+    text-align:center;
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+}
+
+.raza p{
+    line-height:1.8;
+}
