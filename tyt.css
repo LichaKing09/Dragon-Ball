@@ -1,6 +1,11 @@
-html{
-    scroll-behavior:smooth;
-}
+/*=========================================================
+            DRAGON BALL: DRAGON'S SPIRIT
+                  TECNICAS.CSS v2.0
+=========================================================*/
+
+/*==========================
+        RESET
+==========================*/
 
 *{
     margin:0;
@@ -8,242 +13,692 @@ html{
     box-sizing:border-box;
 }
 
-body{
-    background:#111;
-    color:white;
-    font-family:Arial,sans-serif;
+html{
+    scroll-behavior:smooth;
+}
+:root{
 
-    border-left:2px solid gold;
-    border-right:2px solid gold;
+    --bg:#070707;
+    --bg2:#101010;
+    --bg3:#191919;
+
+    --gold:#FFD54A;
+    --gold2:#FFC107;
+    --orange:#FF9800;
+
+    --white:#ffffff;
+    --gray:#cfcfcf;
+    --gray2:#8f8f8f;
+
+    --shadow:
+    0 15px 35px rgba(0,0,0,.45);
+
+    --radius:22px;
+
+    --transition:.35s;
+
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top,#2b1a00 0%,#0d0d0d 40%,#050505 100%);
+
+    color:white;
+
+    font-family:"Segoe UI",Arial,sans-serif;
 
     overflow-x:hidden;
+
 }
 
-/* ========================= */
-/* HEADER */
-/* ========================= */
+/*==========================
+        SCROLLBAR
+==========================*/
 
-header{
-    padding:20px 10px;
+::-webkit-scrollbar{
+
+    width:8px;
+
 }
 
-header h1{
-    color:gold;
-    text-align:center;
+::-webkit-scrollbar-track{
 
-    font-size:1.8rem;
+    background:#111;
 
-    margin-bottom:25px;
-
-    text-shadow:
-    0 0 10px gold,
-    0 0 20px orange;
 }
 
-/* ========================= */
-/* MENU DE IMAGENES */
-/* ========================= */
+::-webkit-scrollbar-thumb{
 
-.menu-imagenes{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:12px;
+    background:var(--gold);
 
-    width:100%;
-    margin:25px auto;
+    border-radius:50px;
+
 }
 
-.card{
-    max-width:48%;
-    flex:0 0 45%;
-    text-align:center;
-}
-
-.card h2{
-    color:gold;
-    font-size:1rem;
-
-    margin-bottom:10px;
-
-    text-shadow:
-        0 0 5px gold,
-        0 0 10px orange;
-}
-
-.card img{
-    width:100%;
-    aspect-ratio:2/3;
-
-    object-fit:cover;
-
-    border:2px solid gold;
-    border-radius:15px;
-
-    box-shadow:
-        0 0 10px rgba(255,215,0,.35);
-
-    display:block;
-
-    transition:.3s;
-}
-
-.card img:hover{
-    transform:scale(1.03);
-
-    box-shadow:
-        0 0 15px gold,
-        0 0 30px orange;
-}
-
-.card img:active{
-    transform:scale(.98);
-}
-/* ========================= */
-/* BOTON MENU */
-/* ========================= */
-
-.marco{
-    display:block;
-
-    width:100%;
-
-    margin-top:20px;
-
-    padding:14px;
-
-    border:2px solid gold;
-
-    border-radius:12px;
-
-    background:rgba(255,215,0,.08);
-
-    text-align:center;
-
-    color:white;
-
-    text-decoration:none;
-}
-
-/* ========================= */
-/* SECCIONES */
-/* ========================= */
-
-.hoja{
-    padding:20px 10px;
-}
-
-.hoja h2{
-    color:gold;
-
-    text-align:center;
-
-    font-size:1.7rem;
-
-    margin-bottom:20px;
-}
-
-/* ========================= */
-/* RAZAS */
-/* ========================= */
-
-.raza{
-    margin:20px 0;
-}
-
-.raza h3{
-    color:orange;
-
-    text-align:center;
-
-    font-size:1.4rem;
-
-    margin-bottom:15px;
-}
-
-.raza p{
-    line-height:1.8;
-}
-
-/* ========================= */
-/* TRANSFORMACIONES */
-/* ========================= */
-
-.transformacion{
-    background:rgba(255,255,255,.03);
-
-    border:2px solid gold;
-
-    border-radius:12px;
-
-    padding:15px;
-
-    margin-bottom:15px;
-}
-
-.transformacion h4{
-    color:gold;
-
-    text-align:center;
-
-    font-size:1.2rem;
-
-    margin-bottom:10px;
-}
-
-.transformacion h5{
-    color:orange;
-
-    margin-top:15px;
-    margin-bottom:8px;
-}
-
-.transformacion p{
-    line-height:1.7;
-}
-
-.transformacion ul{
-    padding-left:18px;
-}
-
-.transformacion li{
-    margin-bottom:8px;
-    line-height:1.6;
-}
-
-/* ========================= */
-/* LINKS */
-/* ========================= */
+/*==========================
+        LINKS
+==========================*/
 
 a{
-    color:gold;
+
     text-decoration:none;
+
+    color:inherit;
+
 }
 
 img{
+
+    max-width:100%;
+
     display:block;
-}
-/* ========================= */
-/* VISTA EN CELULAR */
-/* ========================= */
-@media (max-width: 768px) {
-    .hoja {
-        min-height: 100vh;   /* cada hoja ocupa toda la pantalla */
-        padding: 30px 15px;
-        scroll-snap-align: start; /* se alinea al inicio al hacer scroll */
-    }
 
-    body {
-        scroll-snap-type: y mandatory; /* activa el efecto de “páginas” */
-        overflow-y: scroll;
-    }
-
-    .menu-imagenes {
-        flex-direction: column; /* las cards una debajo de la otra */
-    }
-
-    .card {
-        width: 100%;
-    }
 }
 
+/*=========================================================
+                    HERO
+=========================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:55vh;
+
+    display:grid;
+
+    place-items:center;
+
+    padding:90px 25px 60px;
+
+    overflow:hidden;
+
+}
+.hero h1{
+
+    margin:0;
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-size:clamp(2.8rem,6vw,4rem);
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,193,7,.18),
+    transparent 70%);
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.hero-contenido{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.icono-principal{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    color:var(--gold);
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,193,7,.18),
+    rgba(255,193,7,.05));
+
+    border:2px solid rgba(255,193,7,.3);
+
+    box-shadow:
+
+    0 0 35px rgba(255,193,7,.2);
+
+}
+.hero p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    max-width:550px;
+
+    margin:auto;
+
+}
+
+/*=========================================================
+                BOTON VOLVER
+=========================================================*/
+
+.volver{
+
+    position:absolute;
+
+    top:25px;
+
+    left:20px;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:var(--gold);
+
+    transition:.3s;
+
+}
+
+.volver:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+/*=========================================================
+                BUSCADOR
+=========================================================*/
+
+.busqueda{
+
+    width:100%;
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+.busqueda input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:60px;
+
+    background:#181818;
+
+    color:white;
+
+    font-size:16px;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+}
+
+.busqueda input:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+    0 0 20px rgba(255,193,7,.25);
+
+}
+
+/*=========================================================
+                CATEGORIAS
+=========================================================*/
+
+.categorias{
+
+    display:flex;
+
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+    margin-bottom:30px;
+
+}
+
+.categorias::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.categoria{
+
+    border:none;
+
+    background:#1b1b1b;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:40px;
+
+    white-space:nowrap;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.categoria:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+.categoria.activa{
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-weight:bold;
+
+}
+
+/*=========================================================
+            CONTENEDOR
+=========================================================*/
+
+.contenedor-tecnicas{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+/*=========================================================
+                TARJETAS
+=========================================================*/
+
+.tecnica{
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.tecnica:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+    0 15px 35px rgba(255,193,7,.18);
+
+}
+
+.tecnica h2{
+
+    color:var(--gold);
+
+    margin:18px 0;
+
+    font-size:1.7rem;
+
+}
+
+.tecnica p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+                RAREZA
+=========================================================*/
+
+.rareza{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+.comun{
+
+    background:#444;
+
+}
+
+.rara{
+
+    background:#1565c0;
+
+}
+
+.epica{
+
+    background:#6a1b9a;
+
+}
+
+.legendaria{
+
+    background:#ff9800;
+
+}
+
+.mitica{
+
+    background:#ff0101;
+
+}
+
+/*=========================================================
+                DATOS
+=========================================================*/
+
+.datos{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.datos span{
+
+    background:#222;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    color:#ddd;
+
+}
+
+/*=========================================================
+            BOTON VER TECNICA
+=========================================================*/
+
+.ver-tecnica{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--gold),
+    var(--orange));
+
+    color:#111;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ver-tecnica:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 0 20px rgba(255,193,7,.35);
+
+}
+
+/*=========================================================
+                BOTON SUBIR
+=========================================================*/
+
+.subir{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-size:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.subir:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================================
+                    FOOTER
+=========================================================*/
+
+footer{
+
+    margin-top:80px;
+
+    background:#080808;
+
+    border-top:1px solid rgba(255,193,7,.15);
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+footer p{
+
+    color:var(--gold);
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+footer small{
+
+    color:#888;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(min-width:768px){
+
+    .contenedor-tecnicas{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(min-width:1200px){
+
+    .contenedor-tecnicas{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+}
+.categoria.activa{
+
+    background:linear-gradient(135deg,#FFD54A,#FF9800);
+
+    color:#111;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 0 20px rgba(255,213,74,.5);
+
+    transform:translateY(-2px);
+
+}
+.tecnica{
+
+    display:block;
+
+    animation: aparecer .3s ease;
+    
+
+}
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+.oculta{
+    display:none !important;
+}
