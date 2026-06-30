@@ -55,9 +55,8 @@ header h1{
 }
 
 .card{
-    flex:1;
     max-width:48%;
-
+    flex:0 0 45%;
     text-align:center;
 }
 
