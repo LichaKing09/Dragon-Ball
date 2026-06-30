@@ -1,37 +1,41 @@
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
 
-    margin: 0;
-
-    border: 10px solid gold;
+    border:10px solid gold;
 
     box-shadow:
         inset 0 0 30px gold,
         inset 0 0 60px orange;
 }
 
-/* Portada */
+/*======================
+        PORTADA
+=======================*/
 
 header{
-    min-height: 100vh;
+    min-height:100vh;
 
-    padding: 40px;
-    box-sizing: border-box;
+    padding:40px;
 }
 
 h1{
-    text-align: center;
+    text-align:center;
 
-    color: gold;
+    color:gold;
 
-    margin-top: 40px;
-    margin-bottom: 80px;
+    margin:40px 0 80px;
 
     text-shadow:
         0 0 10px gold,
@@ -39,125 +43,233 @@ h1{
 }
 
 .indice{
-    text-align: left;
+    color:gold;
 
-    margin-left: 100px;
+    margin:30px 0 20px 100px;
 
-    color: gold;
+    text-align:left;
 }
 
 ul{
-    text-align: left;
-
-    margin-left: 20px;
+    margin-left:40px;
+    padding-left:20px;
 }
 
 li{
-    margin: 100px 0;
+    margin:30px 0;
 }
 
 a{
-    color: gold;
-    text-decoration: none;
+    color:gold;
+    text-decoration:none;
 
-    transition: 0.3s;
+    transition:.3s;
 }
 
 a:hover{
-    color: orange;
+    color:orange;
 
-    text-shadow:
-        0 0 10px gold;
+    text-shadow:0 0 10px gold;
 }
+
+/*======================
+        HOJAS
+=======================*/
+
 .hoja{
-    min-height: 100vh;
+    min-height:100vh;
 
-    padding: 80px;
+    padding:80px;
 
-    box-sizing: border-box;
+    border-top:2px solid gold;
 
-    border-top: 2px solid gold;
+    scroll-margin-top:20px;
+}
 
-    scroll-margin-top: 20px;
+.hoja:nth-child(even){
+    background:rgba(255,255,255,.02);
 }
 
 .hoja h2{
-    text-align: center;
+    text-align:center;
 
-    color: gold;
+    color:gold;
 
-    margin-bottom: 40px;
+    margin-bottom:40px;
 
-    text-shadow:
-        0 0 10px gold;
+    text-shadow:0 0 10px gold;
 }
 
 .hoja p{
-    max-width: 900px;
+    max-width:900px;
 
-    margin: auto;
+    margin:auto;
 
-    font-size: 18px;
+    font-size:18px;
 
-    line-height: 1.8;
+    line-height:1.8;
 
-    text-align: justify;
+    text-align:justify;
 }
 
-/* Alternar fondos para diferenciar capítulos */
+/*======================
+    LISTAS DE RAZAS
+=======================*/
 
-.hoja:nth-child(even){
-    background-color: rgba(255,255,255,0.02);
-}
-.navegacion{
-    margin-top: 60px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-}
-
-.navegacion a{
-    padding: 12px 20px;
-
-    border: 2px solid gold;
-
-    border-radius: 10px;
-
-    color: gold;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-}
-
-.navegacion a:hover{
-    background-color: gold;
-
-    color: black;
-
-    box-shadow: 0 0 15px gold;
-}
 .lista-razas{
-    margin-top: 30px;
+    margin-top:30px;
+
+    margin-left:0;
+
+    padding-left:0;
 }
 
-.lista-razas > li{
-    list-style: none;
+.lista-razas>li{
+    list-style:none;
 
-    border-left: 4px solid gold;
+    border-left:4px solid gold;
 
-    padding-left: 20px;
+    padding-left:20px;
 
-    margin-bottom: 40px;
+    margin-bottom:40px;
 }
 
 .lista-razas h3{
-    color: gold;
+    color:gold;
 
-    margin-bottom: 15px;
+    margin-bottom:15px;
+
+    line-height:1.5;
+}
+
+/*======================
+      NAVEGACIÓN
+=======================*/
+
+.navegacion{
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+}
+
+.navegacion a{
+    padding:12px 20px;
+
+    border:2px solid gold;
+
+    border-radius:10px;
+}
+
+.navegacion a:hover{
+    background:gold;
+
+    color:black;
+
+    box-shadow:0 0 15px gold;
+}
+
+/*======================
+        CELULAR
+=======================*/
+
+@media(max-width:768px){
+
+body{
+
+    border-width:4px;
+}
+
+header{
+
+    min-height:auto;
+
+    padding:25px 15px;
+}
+
+h1{
+
+    font-size:1.8rem;
+
+    margin:20px 0 40px;
+}
+
+.indice{
+
+    margin:20px 0 15px;
+
+    text-align:left;
+}
+
+ul{
+
+    margin-left:18px;
+
+    padding-left:5px;
+}
+
+li{
+
+    margin:18px 0;
+}
+
+.hoja{
+
+    padding:30px 15px;
+}
+
+.hoja h2{
+
+    font-size:1.6rem;
+
+    margin-bottom:25px;
+}
+
+.hoja p{
+
+    max-width:100%;
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.7;
+}
+
+.lista-razas{
+
+    margin-top:20px;
+}
+
+.lista-razas>li{
+
+    padding-left:12px;
+
+    margin:25px 0;
+}
+
+.lista-razas h3{
+
+    font-size:18px;
+}
+
+.navegacion{
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.navegacion a{
+
+    width:100%;
+
+    text-align:center;
+}
+
 }
