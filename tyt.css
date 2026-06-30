@@ -1,11 +1,6 @@
-/*=========================================================
-            DRAGON BALL: DRAGON'S SPIRIT
-                  TECNICAS.CSS v2.0
-=========================================================*/
-
-/*==========================
-        RESET
-==========================*/
+/*=========================================
+        TRANSFORMACIONES.CSS
+=========================================*/
 
 *{
     margin:0;
@@ -16,33 +11,24 @@
 html{
     scroll-behavior:smooth;
 }
+
 :root{
 
     --bg:#070707;
     --bg2:#101010;
-    --bg3:#191919;
 
     --gold:#FFD54A;
-    --gold2:#FFC107;
     --orange:#FF9800;
 
     --white:#ffffff;
     --gray:#cfcfcf;
-    --gray2:#8f8f8f;
-
-    --shadow:
-    0 15px 35px rgba(0,0,0,.45);
-
-    --radius:22px;
-
-    --transition:.35s;
 
 }
 
 body{
 
     background:
-    radial-gradient(circle at top,#2b1a00 0%,#0d0d0d 40%,#050505 100%);
+    radial-gradient(circle at top,#2b1a00 0%,#111 40%,#050505 100%);
 
     color:white;
 
@@ -52,13 +38,21 @@ body{
 
 }
 
-/*==========================
+/*=========================
         SCROLLBAR
-==========================*/
+=========================*/
 
 ::-webkit-scrollbar{
 
     width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
 
 }
 
@@ -68,62 +62,37 @@ body{
 
 }
 
-::-webkit-scrollbar-thumb{
-
-    background:var(--gold);
-
-    border-radius:50px;
-
-}
-
-/*==========================
+/*=========================
         LINKS
-==========================*/
+=========================*/
 
 a{
 
-    text-decoration:none;
-
     color:inherit;
 
-}
-
-img{
-
-    max-width:100%;
-
-    display:block;
+    text-decoration:none;
 
 }
 
-/*=========================================================
-                    HERO
-=========================================================*/
+/*=========================
+          HERO
+=========================*/
 
 .hero{
 
-    position:relative;
+    min-height:45vh;
 
-    min-height:55vh;
+    display:flex;
 
-    display:grid;
+    justify-content:center;
 
-    place-items:center;
-
-    padding:90px 25px 60px;
-
-    overflow:hidden;
-
-}
-.hero h1{
-
-    margin:0;
+    align-items:center;
 
     text-align:center;
 
-    color:var(--gold);
+    position:relative;
 
-    font-size:clamp(2.8rem,6vw,4rem);
+    padding:80px 20px;
 
 }
 
@@ -137,81 +106,33 @@ img{
 
     height:450px;
 
+    border-radius:50%;
+
     background:
 
     radial-gradient(circle,
     rgba(255,193,7,.18),
     transparent 70%);
 
-    border-radius:50%;
-
-    top:-180px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
 }
 
-.hero-contenido{
+.hero h1{
+
+    font-size:3rem;
+
+    color:var(--gold);
 
     position:relative;
 
     z-index:2;
 
-}
-
-.icono-principal{
-
-    width:120px;
-
-    height:120px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:60px;
-
-    color:var(--gold);
-
-    background:
-
-    linear-gradient(
-    145deg,
-    rgba(255,193,7,.18),
-    rgba(255,193,7,.05));
-
-    border:2px solid rgba(255,193,7,.3);
-
-    box-shadow:
-
-    0 0 35px rgba(255,193,7,.2);
-
-}
-.hero p{
-
-    color:var(--gray);
-
-    line-height:1.8;
-
-    max-width:550px;
-
-    margin:auto;
+    text-shadow:0 0 20px rgba(255,193,7,.35);
 
 }
 
-/*=========================================================
-                BOTON VOLVER
-=========================================================*/
+/*=========================
+      BOTON VOLVER
+=========================*/
 
 .volver{
 
@@ -221,15 +142,13 @@ img{
 
     left:20px;
 
-    padding:12px 20px;
+    padding:12px 22px;
 
     border-radius:50px;
 
-    background:rgba(255,255,255,.05);
+    background:#1b1b1b;
 
     border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(10px);
 
     color:var(--gold);
 
@@ -245,13 +164,11 @@ img{
 
 }
 
-/*=========================================================
-                BUSCADOR
-=========================================================*/
+/*=========================
+        BUSCADOR
+=========================*/
 
 .busqueda{
-
-    width:100%;
 
     max-width:800px;
 
@@ -265,13 +182,13 @@ img{
 
     width:100%;
 
-    padding:18px 22px;
+    padding:18px;
+
+    border-radius:50px;
 
     border:none;
 
     outline:none;
-
-    border-radius:60px;
 
     background:#181818;
 
@@ -279,37 +196,27 @@ img{
 
     font-size:16px;
 
-    border:2px solid transparent;
-
-    transition:.3s;
-
 }
 
 .busqueda input:focus{
 
-    border-color:var(--gold);
-
-    box-shadow:
-
-    0 0 20px rgba(255,193,7,.25);
+    box-shadow:0 0 20px rgba(255,213,74,.3);
 
 }
 
-/*=========================================================
-                CATEGORIAS
-=========================================================*/
+/*=========================
+        CATEGORIAS
+=========================*/
 
 .categorias{
 
     display:flex;
 
-    gap:12px;
+    gap:15px;
 
     overflow-x:auto;
 
     padding:20px;
-
-    margin-bottom:30px;
 
 }
 
@@ -321,21 +228,21 @@ img{
 
 .categoria{
 
+    padding:12px 22px;
+
     border:none;
-
-    background:#1b1b1b;
-
-    color:white;
-
-    padding:12px 20px;
 
     border-radius:40px;
 
-    white-space:nowrap;
+    background:#1a1a1a;
+
+    color:white;
 
     cursor:pointer;
 
     transition:.3s;
+
+    white-space:nowrap;
 
 }
 
@@ -349,25 +256,31 @@ img{
 
 .categoria.activa{
 
-    background:var(--gold);
+    background:
+
+    linear-gradient(135deg,#FFD54A,#FF9800);
 
     color:#111;
 
     font-weight:bold;
 
+    box-shadow:
+
+    0 0 18px rgba(255,193,7,.45);
+
 }
 
-/*=========================================================
-            CONTENEDOR
-=========================================================*/
+/*=========================
+        CONTENEDOR
+=========================*/
 
-.contenedor-tecnicas{
+.contenedor-transformaciones{
 
-    max-width:1200px;
+    max-width:1300px;
 
     margin:auto;
 
-    padding:20px;
+    padding:30px;
 
     display:grid;
 
@@ -377,11 +290,11 @@ img{
 
 }
 
-/*=========================================================
-                TARJETAS
-=========================================================*/
+/*=========================
+         TARJETAS
+=========================*/
 
-.tecnica{
+.transformacion{
 
     background:
 
@@ -392,17 +305,17 @@ img{
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:24px;
+    border-radius:22px;
 
-    padding:30px;
+    padding:28px;
 
     transition:.35s;
 
-    backdrop-filter:blur(10px);
+    animation:aparecer .35s ease;
 
 }
 
-.tecnica:hover{
+.transformacion:hover{
 
     transform:translateY(-8px);
 
@@ -410,39 +323,39 @@ img{
 
     box-shadow:
 
-    0 15px 35px rgba(255,193,7,.18);
+    0 15px 35px rgba(255,193,7,.2);
 
 }
 
-.tecnica h2{
+.transformacion h2{
 
     color:var(--gold);
 
     margin:18px 0;
 
-    font-size:1.7rem;
+    font-size:1.8rem;
 
 }
 
-.tecnica p{
+.transformacion p{
 
-    color:var(--gray);
+    color:#d0d0d0;
 
     line-height:1.8;
 
 }
 
-/*=========================================================
-                RAREZA
-=========================================================*/
+/*=========================
+         RAZA
+=========================*/
 
-.rareza{
+.raza{
 
     display:inline-block;
 
     padding:8px 15px;
 
-    border-radius:50px;
+    border-radius:40px;
 
     font-size:14px;
 
@@ -450,41 +363,49 @@ img{
 
 }
 
-.comun{
+.humano{
 
-    background:#444;
-
-}
-
-.rara{
-
-    background:#1565c0;
+    background:#2980b9;
 
 }
 
-.epica{
-
-    background:#6a1b9a;
-
-}
-
-.legendaria{
+.saiyajin{
 
     background:#ff9800;
 
 }
 
-.mitica{
+.namek{
 
-    background:#ff0101;
+    background:#27ae60;
 
 }
 
-/*=========================================================
-                DATOS
-=========================================================*/
+.freezer{
 
-.datos{
+    background:#9b59b6;
+
+}
+
+.androide{
+
+    background:#95a5a6;
+
+}
+
+.majin{
+
+    background:#ff4da6;
+
+}
+
+/*=========================
+       ESTADISTICAS
+=========================*/
+
+.bonus{
+
+    margin-top:25px;
 
     display:flex;
 
@@ -492,33 +413,31 @@ img{
 
     gap:10px;
 
-    margin:25px 0;
-
 }
 
-.datos span{
+.bonus span{
 
     background:#222;
 
-    padding:10px 14px;
+    padding:10px 15px;
 
     border-radius:12px;
 
-    color:#ddd;
-
 }
 
-/*=========================================================
-            BOTON VER TECNICA
-=========================================================*/
+/*=========================
+        BOTON
+=========================*/
 
-.ver-tecnica{
+.ver-transformacion{
+
+    margin-top:25px;
 
     width:100%;
 
-    border:none;
-
     padding:16px;
+
+    border:none;
 
     border-radius:50px;
 
@@ -526,8 +445,8 @@ img{
 
     linear-gradient(
     135deg,
-    var(--gold),
-    var(--orange));
+    #FFD54A,
+    #FF9800);
 
     color:#111;
 
@@ -539,19 +458,19 @@ img{
 
 }
 
-.ver-tecnica:hover{
+.ver-transformacion:hover{
 
     transform:translateY(-3px);
 
     box-shadow:
 
-    0 0 20px rgba(255,193,7,.35);
+    0 0 18px rgba(255,193,7,.4);
 
 }
 
-/*=========================================================
-                BOTON SUBIR
-=========================================================*/
+/*=========================
+      BOTON SUBIR
+=========================*/
 
 .subir{
 
@@ -565,21 +484,19 @@ img{
 
     height:55px;
 
-    border-radius:50%;
-
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
+    border-radius:50%;
+
     background:var(--gold);
 
     color:#111;
 
     font-size:22px;
-
-    box-shadow:var(--shadow);
 
     transition:.3s;
 
@@ -591,9 +508,9 @@ img{
 
 }
 
-/*=========================================================
-                    FOOTER
-=========================================================*/
+/*=========================
+         FOOTER
+=========================*/
 
 footer{
 
@@ -605,33 +522,53 @@ footer{
 
     text-align:center;
 
-    padding:50px 20px;
+    padding:40px;
+
+    color:#aaa;
 
 }
 
-footer p{
+/*=========================
+        ANIMACION
+=========================*/
 
-    color:var(--gold);
+@keyframes aparecer{
 
-    font-size:20px;
+    from{
 
-    margin-bottom:10px;
+        opacity:0;
+
+        transform:
+        translateY(20px)
+        scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
 
 }
 
-footer small{
+.oculta{
 
-    color:#888;
+    display:none !important;
 
 }
 
-/*=========================================================
-                RESPONSIVE
-=========================================================*/
+/*=========================
+        RESPONSIVE
+=========================*/
 
 @media(min-width:768px){
 
-    .contenedor-tecnicas{
+    .contenedor-transformaciones{
 
         grid-template-columns:repeat(2,1fr);
 
@@ -641,7 +578,7 @@ footer small{
 
 @media(min-width:1200px){
 
-    .contenedor-tecnicas{
+    .contenedor-transformaciones{
 
         grid-template-columns:repeat(3,1fr);
 
@@ -653,52 +590,4 @@ footer small{
 
     }
 
-}
-.categoria.activa{
-
-    background:linear-gradient(135deg,#FFD54A,#FF9800);
-
-    color:#111;
-
-    font-weight:bold;
-
-    box-shadow:
-        0 0 20px rgba(255,213,74,.5);
-
-    transform:translateY(-2px);
-
-}
-.tecnica{
-
-    display:block;
-
-    animation: aparecer .3s ease;
-    
-
-}
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(20px)
-            scale(.96);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-}
-.oculta{
-    display:none !important;
 }
