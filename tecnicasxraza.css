@@ -10,266 +10,289 @@ html{
 
 body{
     background:#111;
-    color:white;
-    font-family:Arial,sans-serif;
+    color:#f5f5f5;
+    font-family:Arial,Helvetica,sans-serif;
 
-    border:10px solid gold;
-
-    box-shadow:
-        inset 0 0 30px gold,
-        inset 0 0 60px orange;
-}
-
-/*======================
-        PORTADA
-=======================*/
-
-header{
-    min-height:100vh;
-
-    padding:40px;
-}
-
-h1{
-    text-align:center;
-
-    color:gold;
-
-    margin:40px 0 80px;
-
-    text-shadow:
-        0 0 10px gold,
-        0 0 20px orange;
-}
-
-.indice{
-    color:gold;
-
-    margin:30px 0 20px 100px;
-
-    text-align:left;
-}
-
-ul{
-    margin-left:40px;
-    padding-left:20px;
-}
-
-li{
-    margin:30px 0;
-}
-
-a{
-    color:gold;
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-a:hover{
-    color:orange;
-
-    text-shadow:0 0 10px gold;
-}
-
-/*======================
-        HOJAS
-=======================*/
-
-.hoja{
-    min-height:100vh;
-
-    padding:80px;
-
-    border-top:2px solid gold;
-
-    scroll-margin-top:20px;
-}
-
-.hoja:nth-child(even){
-    background:rgba(255,255,255,.02);
-}
-
-.hoja h2{
-    text-align:center;
-
-    color:gold;
-
-    margin-bottom:40px;
-
-    text-shadow:0 0 10px gold;
-}
-
-.hoja p{
-    max-width:900px;
-
-    margin:auto;
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    text-align:justify;
-}
-
-/*======================
-    LISTAS DE RAZAS
-=======================*/
-
-.lista-razas{
-    margin-top:30px;
-
-    margin-left:0;
-
-    padding-left:0;
-}
-
-.lista-razas>li{
-    list-style:none;
+    width:100%;
+    overflow-x:hidden;
 
     border-left:4px solid gold;
+    border-right:4px solid gold;
 
-    padding-left:20px;
-
-    margin-bottom:40px;
-}
-
-.lista-razas h3{
-    color:gold;
-
-    margin-bottom:15px;
-
-    line-height:1.5;
-}
-
-/*======================
-      NAVEGACIÓN
-=======================*/
-
-.navegacion{
-    margin-top:60px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
-}
-
-.navegacion a{
-    padding:12px 20px;
-
-    border:2px solid gold;
-
-    border-radius:10px;
-}
-
-.navegacion a:hover{
-    background:gold;
-
-    color:black;
-
-    box-shadow:0 0 15px gold;
-}
-
-/*======================
-        CELULAR
-=======================*/
-
-@media(max-width:768px){
-
-body{
-
-    border-width:4px;
-}
-
-header{
-
-    min-height:auto;
-
-    padding:25px 15px;
-}
-
-h1{
-
-    font-size:1.8rem;
-
-    margin:20px 0 40px;
-}
-
-.indice{
-
-    margin:20px 0 15px;
-
-    text-align:left;
-}
-
-ul{
-
-    margin-left:18px;
-
-    padding-left:5px;
-}
-
-li{
-
-    margin:18px 0;
-}
-
-.hoja{
-
-    padding:30px 15px;
-}
-
-.hoja h2{
-
-    font-size:1.6rem;
-
-    margin-bottom:25px;
-}
-
-.hoja p{
-
-    max-width:100%;
-
-    margin:0;
-
-    font-size:16px;
+    box-shadow:
+    inset 0 0 25px rgba(255,215,0,.25);
 
     line-height:1.7;
 }
 
+/* =========================
+        ENCABEZADO
+========================= */
+
+header{
+
+    padding:25px 15px 40px;
+}
+
+h1{
+
+    color:gold;
+
+    text-align:center;
+
+    font-size:2rem;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 10px gold;
+}
+
+.indice{
+
+    color:gold;
+
+    font-size:1.4rem;
+
+    margin-bottom:18px;
+}
+
+/* =========================
+         ENLACES
+========================= */
+
+a{
+
+    color:gold;
+
+    text-decoration:none;
+}
+
+a:active{
+
+    opacity:.8;
+}
+
+/* =========================
+         ÍNDICE
+========================= */
+
+header ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+header li{
+
+    margin-bottom:12px;
+}
+
+header ul a{
+
+    display:block;
+
+    width:100%;
+
+    padding:15px;
+
+    background:#1b1b1b;
+
+    border:2px solid gold;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-size:17px;
+
+    font-weight:bold;
+}
+
+/* =========================
+      BOTÓN VOLVER
+========================= */
+
+.marco{
+
+    display:block;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    text-align:center;
+
+    border:2px solid gold;
+
+    border-radius:14px;
+
+    background:#222;
+}
+
+/* =========================
+         CAPÍTULOS
+========================= */
+
+.hoja{
+
+    padding:35px 15px;
+
+    border-top:2px solid gold;
+}
+
+.hoja:nth-child(even){
+
+    background:#181818;
+}
+
+.hoja h2{
+
+    color:gold;
+
+    text-align:center;
+
+    font-size:1.8rem;
+
+    margin-bottom:22px;
+
+    text-shadow:
+    0 0 10px gold;
+}
+
+.hoja p{
+
+    font-size:17px;
+
+    text-align:left;
+
+    margin-bottom:18px;
+}
+
+/* =========================
+          LISTAS
+========================= */
+
+ul{
+
+    padding-left:22px;
+
+    margin-bottom:18px;
+}
+
+li{
+
+    margin:8px 0;
+}
+
+/* =========================
+     TARJETAS DE TÉCNICAS
+========================= */
+
 .lista-razas{
 
-    margin-top:20px;
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
 }
 
 .lista-razas>li{
 
-    padding-left:12px;
+    background:#1d1d1d;
 
-    margin:25px 0;
+    border-left:5px solid gold;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-bottom:22px;
+
+    box-shadow:
+    0 0 10px rgba(255,215,0,.08);
 }
 
 .lista-razas h3{
 
-    font-size:18px;
+    color:gold;
+
+    font-size:1.15rem;
+
+    margin-bottom:12px;
+
+    line-height:1.5;
 }
 
+.lista-razas p{
+
+    margin-bottom:12px;
+}
+
+.lista-razas ul{
+
+    margin-top:10px;
+}
+
+/* =========================
+       NAVEGACIÓN
+========================= */
+
 .navegacion{
+
+    display:flex;
 
     flex-direction:column;
 
     gap:12px;
+
+    margin-top:30px;
 }
 
 .navegacion a{
 
+    display:block;
+
     width:100%;
 
+    padding:15px;
+
     text-align:center;
+
+    background:#1d1d1d;
+
+    border:2px solid gold;
+
+    border-radius:12px;
+
+    font-weight:bold;
 }
 
+.navegacion a:active{
+
+    transform:scale(.98);
+}
+
+/* =========================
+          IMÁGENES
+========================= */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+}
+
+iframe{
+
+    width:100%;
+
+    border:none;
 }
