@@ -10,143 +10,119 @@ html{
 
 body{
     background:#111;
-    color:#f5f5f5;
-    font-family:Arial,Helvetica,sans-serif;
-
-    width:100%;
-    overflow-x:hidden;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    line-height:1.7;
 
     border-left:4px solid gold;
     border-right:4px solid gold;
 
     box-shadow:
-    inset 0 0 25px rgba(255,215,0,.25);
+        inset 0 0 25px rgba(255,215,0,.35);
 
-    line-height:1.7;
+    overflow-x:hidden;
 }
 
-/* =========================
-        ENCABEZADO
-========================= */
+/*==========================
+            HEADER
+===========================*/
 
 header{
-
-    padding:25px 15px 40px;
+    padding:30px 18px;
 }
 
 h1{
-
     color:gold;
-
     text-align:center;
 
     font-size:2rem;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 
     text-shadow:
-    0 0 10px gold;
+        0 0 10px gold,
+        0 0 20px orange;
 }
 
 .indice{
-
     color:gold;
 
-    font-size:1.4rem;
+    font-size:1.5rem;
 
     margin-bottom:18px;
 }
 
-/* =========================
-         ENLACES
-========================= */
+/*==========================
+            LINKS
+===========================*/
 
 a{
-
     color:gold;
-
     text-decoration:none;
+    transition:.25s;
 }
 
-a:active{
-
-    opacity:.8;
+a:hover{
+    color:orange;
 }
-
-/* =========================
-         ÍNDICE
-========================= */
 
 header ul{
-
     list-style:none;
 
-    padding:0;
-
     margin:0;
+    padding:0;
 }
 
 header li{
-
-    margin-bottom:12px;
+    margin:12px 0;
 }
 
-header ul a{
-
+header li a{
     display:block;
 
     width:100%;
 
-    padding:15px;
-
-    background:#1b1b1b;
+    padding:14px;
 
     border:2px solid gold;
+    border-radius:12px;
 
-    border-radius:14px;
+    background:rgba(255,215,0,.05);
 
     text-align:center;
-
-    font-size:17px;
-
-    font-weight:bold;
 }
 
-/* =========================
-      BOTÓN VOLVER
-========================= */
-
 .marco{
-
     display:block;
 
     margin-top:25px;
 
-    padding:15px;
+    width:100%;
 
     text-align:center;
 
+    padding:14px;
+
     border:2px solid gold;
+    border-radius:12px;
 
-    border-radius:14px;
-
-    background:#222;
+    background:rgba(255,215,0,.08);
 }
 
-/* =========================
-         CAPÍTULOS
-========================= */
+/*==========================
+          CAPÍTULOS
+===========================*/
 
 .hoja{
 
-    padding:35px 15px;
+    padding:35px 18px;
 
     border-top:2px solid gold;
 }
 
 .hoja:nth-child(even){
 
-    background:#181818;
+    background:rgba(255,255,255,.02);
 }
 
 .hoja h2{
@@ -155,12 +131,11 @@ header ul a{
 
     text-align:center;
 
-    font-size:1.8rem;
+    font-size:1.9rem;
 
-    margin-bottom:22px;
+    margin-bottom:28px;
 
-    text-shadow:
-    0 0 10px gold;
+    text-shadow:0 0 10px gold;
 }
 
 .hoja p{
@@ -172,15 +147,15 @@ header ul a{
     margin-bottom:18px;
 }
 
-/* =========================
-          LISTAS
-========================= */
+/*==========================
+        LISTAS NORMALES
+===========================*/
 
 ul{
 
-    padding-left:22px;
+    margin-left:18px;
 
-    margin-bottom:18px;
+    padding-left:10px;
 }
 
 li{
@@ -188,33 +163,30 @@ li{
     margin:8px 0;
 }
 
-/* =========================
-     TARJETAS DE TÉCNICAS
-========================= */
+/*==========================
+        TARJETAS
+===========================*/
 
 .lista-razas{
 
     list-style:none;
 
-    padding:0;
-
     margin:0;
+
+    padding:0;
 }
 
 .lista-razas>li{
 
-    background:#1d1d1d;
-
-    border-left:5px solid gold;
-
-    border-radius:12px;
+    margin-bottom:25px;
 
     padding:18px;
 
-    margin-bottom:22px;
+    border-left:5px solid gold;
 
-    box-shadow:
-    0 0 10px rgba(255,215,0,.08);
+    border-radius:0 12px 12px 0;
+
+    background:rgba(255,255,255,.03);
 }
 
 .lista-razas h3{
@@ -223,9 +195,9 @@ li{
 
     font-size:1.15rem;
 
-    margin-bottom:12px;
-
     line-height:1.5;
+
+    margin-bottom:15px;
 }
 
 .lista-razas p{
@@ -238,9 +210,14 @@ li{
     margin-top:10px;
 }
 
-/* =========================
-       NAVEGACIÓN
-========================= */
+.lista-razas ul li{
+
+    margin:6px 0;
+}
+
+/*==========================
+        NAVEGACIÓN
+===========================*/
 
 .navegacion{
 
@@ -250,49 +227,87 @@ li{
 
     gap:12px;
 
-    margin-top:30px;
+    margin-top:35px;
 }
 
 .navegacion a{
 
-    display:block;
-
     width:100%;
-
-    padding:15px;
 
     text-align:center;
 
-    background:#1d1d1d;
+    padding:15px;
 
     border:2px solid gold;
 
     border-radius:12px;
 
-    font-weight:bold;
+    background:rgba(255,215,0,.05);
 }
 
-.navegacion a:active{
+.navegacion a:hover{
 
-    transform:scale(.98);
+    background:gold;
+
+    color:#111;
 }
 
-/* =========================
+/*==========================
           IMÁGENES
-========================= */
+===========================*/
 
-img{
-
-    display:block;
-
-    max-width:100%;
-
-    height:auto;
-}
-
+img,
 iframe{
 
     width:100%;
 
-    border:none;
+    height:auto;
+
+    display:block;
+
+    border-radius:12px;
+}
+
+/*==========================
+      PANTALLAS GRANDES
+===========================*/
+
+@media(min-width:900px){
+
+body{
+
+    border-left:8px solid gold;
+
+    border-right:8px solid gold;
+}
+
+header,
+.hoja{
+
+    width:min(1100px,95%);
+
+    margin:auto;
+
+    padding:50px;
+}
+
+.lista-razas>li{
+
+    padding:25px;
+}
+
+.navegacion{
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.navegacion a{
+
+    width:auto;
+}
+
 }
