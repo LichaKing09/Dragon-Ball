@@ -3,555 +3,1194 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Técnicas por Raza | Dragon Ball: Dragon's Spirit</title>
+    <title>Técnicas | Dragon Ball: Dragon's Spirit</title>
 
-<link rel="stylesheet" href="tecnicasxraza.css">
+    <link rel="stylesheet" href="tecnicas.css">
 
 </head>
 
 <body>
 
-        <header class="hero">
+    <!-- CABECERA -->
 
-                <a href="index.html" class="volver">
-                        ← Volver al Inicio
-                </a>
-        
-                <h1>Técnicas por Raza</h1>
+    <header class="hero">
 
-        </header>
+        <a href="index.html" class="volver">
+            ← Volver al Inicio
+        </a>
 
-        <section class="busqueda">
-        
+        <h1>Técnicas</h1>
+    </header>
+
+    <!-- BUSCADOR -->
+
+    <section class="busqueda">
+
         <input
         type="text"
         id="buscar"
-        placeholder="🔍 Buscar raza o técnica...">
-        
-        </section>
-        <section class="categorias">
+        placeholder="🔍 Buscar técnica...">
 
-    <button class="categoria activa" data-filtro="todas">
-        Todas
-    </button>
+    </section>
 
-    <button class="categoria" data-filtro="saiyajin">
-        🟡 Saiyajines
-    </button>
+    <!-- FILTROS -->
 
-    <button class="categoria" data-filtro="monstruo">
-        🩷 Monstruos
-    </button>
+    <section class="categorias">
 
-    <button class="categoria" data-filtro="namek">
-        🟢 Namekianos
-    </button>
+        <button class="categoria activa" data-filtro="todas">
+            Todas
+        </button>
 
-    <button class="categoria" data-filtro="humano">
-        ⚪ Humanos
-    </button>
+        <button class="categoria" data-filtro="rara">
+            🟦 Rara
+        </button>
 
-    <button class="categoria" data-filtro="freeza">
-        🟣 Clan Freeza
-    </button>
+        <button class="categoria" data-filtro="epica">
+            🟪 Épica
+        </button>
 
-</section>
+        <button class="categoria" data-filtro="legendaria">
+            🟧 Legendaria
+        </button>
 
-<main class="contenedor-razas">
+        <button class="categoria" data-filtro="mitica">
+            🔴 Mítica
+        </button>
 
-<!--==========================
-        SAIYAJINES
-===========================-->
+    </section>
 
-               <section class="raza" data-raza="saiyajin">
-                
-                <div class="raza-header">
-                
-                <h2>🟡 Saiyajines</h2>
-                
-                <p>
-                Los Saiyajines destacan por su enorme potencial de combate. Sus técnicas potencian sus estadísticas, aprovechan el instinto guerrero y aumentan su poder cuanto más intensa es la batalla.
-                </p>
-                
-                </div>
-                
-                <div class="tecnicas">
-                
-                <article class="tecnica">
-                
-                <h3>BATTLE INSTINCT</h3>
-                
-                <p>
-                El Saiyajin despierta sus instintos naturales de combate.
-                </p>
-                
-                <div class="bonus">
-                
-                <span>⚡ Coste: 100 Ki</span>
-                
-                <span>⭐ Control: 120</span>
-                
-                <span>⚔️ +40 Velocidad</span>
-                
-                <span>🛡️ +30 Resistencia</span>
-                
-                <span>⏳ Duración: 3 turnos</span>
-                
-                </div>
-                
-                </article>
-                
-                <article class="tecnica">
-                
-                <h3>WARRIOR'S PRIDE</h3>
-                
-                <p>
-                La voluntad del Saiyajin se fortalece frente a un enemigo que lo supere al menos un 30% en alguna estadística.
-                </p>
-                
-                <div class="bonus">
-                
-                <span>⚡ Coste: 150 Ki</span>
-                
-                <span>⭐ Control: 180</span>
-                
-                <span>⚔️ +50 Daño</span>
-                
-                <span>💠 +20 Ki</span>
-                
-                </div>
-                
-                </article>
-                
-                <article class="tecnica">
-                
-                <h3>BLUTZ POWER</h3>
-                
-                <p>
-                El usuario genera artificialmente Ondas Blutz para alcanzar la transformación Ozaru (Gran Mono).
-                </p>
-                
-                <div class="bonus">
-                
-                <span>⚡ Coste: 350 Ki</span>
-                
-                <span>⭐ Control: 450</span>
-                
-                </div>
-                
-                </article>
-                
-                <article class="tecnica">
-                
-                <h3>SAIYAN SPIRIT</h3>
-                
-                <p>
-                El usuario canaliza toda su voluntad guerrera cuando su HP baja del 50%.
-                </p>
-                
-                <div class="bonus">
-                
+    <!-- CATÁLOGO -->
+
+    <main class="contenedor-tecnicas">
+
+        <!-- ==================== -->
+        <!-- RARA -->
+        <!-- ==================== -->
+
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI BLAST</h2>
+
+            <p>
+                Proyectil básico de energía lanzado desde manos o dedos. +5pts Daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki</span>
+
+                <span>⭐ Control: 5</span>
+
+            </div>
+
+        </article>
+                <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI BURST</h2>
+
+            <p>
+                Liberación de energía en un radio corto (Hasta 3 Metros) alrededor del usuario. Sirve para empujar enemigos o romper guardias, se manifiesta como si fuera una ráfaga de viento.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 20 Ki</span>
+
+                <span>⭐ Control: 35</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI WALL BREAK</h2>
+
+            <p>
+                Concentración de Ki en un solo impacto para romper bloqueos. Sin daño extra, sirve exclusivamente para romper guardias.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 20 Ki</span>
+
+                <span>⭐ Control: 30</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI TRACE</h2>
+
+            <p>
+                Deja una marca de energía que confunde la percepción del enemigo. Sirve para enemigos que rastrean rastros de Ki.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki</span>
+
+                <span>⭐ Control: 10</span>
+
+            </div>
+
+        </article>        
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI PUSH</h2>
+
+            <p>
+             Liberación de energía en forma de empuje frontal. Sirve para alejar enemigos o romper combos.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki</span>
+
+                <span>⭐ Control: 10</span>
+
+            </div>
+        </article>        
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI SENSE</h2>
+
+            <p>
+               Permite detectar la energía de otros combatientes. Rango 3km.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 30 Ki</span>
+
+                <span>⭐ Control: 20</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI IMPACT</h2>
+
+            <p>
+                Golpe que libera energía dentro del contacto físico. Daño leve adicional ignorando parte de defensa, +5pts Daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki</span>
+
+                <span>⭐ Control: 10</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI JAB</h2>
+
+            <p>
+               Microexplosión de energía al impactar un golpe físico. Daño ligero extra en combos, +2pts acumulable. Osea, suponiendo que das 30 KI JAB seguidos, sumaras un +60pts de daño. Acumulable hasta 50 veces.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki</span>
+
+                <span>⭐ Control: 5</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KI SLICER</h2>
+
+            <p>
+                Una fina hoja de energía comprimida que se lanza como proyectil. +5pts Daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10 Ki</span>
+
+                <span>⭐ Control: 10</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>DASH</h2>
+
+            <p>
+                Movimiento rápido impulsado por Ki. +40pts Velocidad. Alcance de 15 Metros. Solo esa accion.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 30 Ki</span>
+
+                <span>⭐ Control: 50</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>FLASH STEP</h2>
+
+            <p>
+                Movimiento explosivo de corta distancia (Alcance 3 Metros) usando Ki en las piernas. Aumento de velocidad, +10pts Velocidad. Solo esa accion.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10 Ki</span>
+
+                <span>⭐ Control: 15</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>ENERGY GRIP</h2>
+
+            <p>
+                El usuario envuelve sus manos con Ki para aumentar fuerza de agarre y asi poder agarrar a un rival. +10 Resistencia.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10 Ki</span>
+
+                <span>⭐ Control: 20</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>ENERGY STEP</h2>
+
+            <p>
+                El usuario deja pequeñas explosiones de Ki al moverse. +15pts velocidad. Solo esa accion.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10 Ki</span>
+
+                <span>⭐ Control: 25</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>BURST PUNCH</h2>
+
+            <p>
+                Golpe que explota al contacto con una pequeña descarga de Ki. +20pts daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10 Ki</span>
+
+                <span>⭐ Control: 25</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>KIKOHÁ</h2>
+
+            <p>
+                Disparos consecutivos de pequeñas esferas de energía. +5pts daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5 Ki c/u</span>
+
+                <span>⭐ Control: 5</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>ENERGY WAVE</h2>
+
+            <p>
+             Rayo de Ki en línea recta de mediano alcance (Hasta 20 Metros). +15pts Daño.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 20 Ki</span>
+
+                <span>⭐ Control: 30</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="rara">
+
+            <div class="rareza rara">
+                🟦 Rara
+            </div>
+
+            <h2>AFTERIMAGE</h2>
+
+            <p>
+                Movimiento rápido que genera una ilusión del usuario. +25 Velocidad. No sirve para atacar.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 20 Ki</span>
+
+                <span>⭐ Control: 40</span>
+
+            </div>
+
+        </article>
+        <!-- ==================== -->
+        <!-- ÉPICA -->
+        <!-- ==================== -->
+
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>ENERGY CRASH</h2>
+
+            <p>
+              El usuario libera Ki en el momento del impacto generando una explosión de choque. +65pts Daño. Puede cancelar ataques cuerpo a cuerpo si impacta al mismo tiempo.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 50 Ki</span>
+
+                <span>⭐ Control: 60</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>BREAKING SHOT</h2>
+
+            <p>
+               Proyectil de Ki diseñado para romper defensa. +60pts Daño. Si impacta en guardia, reduce resistencia del rival ese turno.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 45 Ki</span>
+
+                <span>⭐ Control: 55</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>PRESSURE LOCK</h2>
+
+            <p>
+               El usuario genera presión de Ki constante sobre el enemigo. No es daño directo. Reduce velocidad enemiga en -20pts por 1 turno.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 50 Ki</span>
+
+                <span>⭐ Control: 65</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>IMPACT WAVE</h2>
+
+            <p>
+              Onda de energía que se expande en línea. +65pts Daño. Empuja al enemigo varios metros si conecta.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 55 Ki</span>
+
+                <span>⭐ Control: 60</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>KI DISRUPT</h2>
+
+            <p>
+               Interfiere momentáneamente el flujo de Ki del rival. Cancela técnicas débiles o en preparación.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 60 Ki</span>
+
+                <span>⭐ Control: 70</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>BURST BREAK</h2>
+
+            <p>
+              Explosión corta de Ki en el punto de contacto. +60pts Daño. Rompe combos enemigos. 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 50 Ki</span>
+
+                <span>⭐ Control: 55</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>ENERGY COUNTER</h2>
+
+            <p>
+               Si el usuario bloquea o recibe un golpe, libera Ki de respuesta automática. +70pts Daño contraatacando.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 55 Ki</span>
+
+                <span>⭐ Control: 65</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>KI SHOVE</h2>
+
+            <p>
+               Empuje de energía directo. No busca daño alto, sino control del espacio. +40pts Daño + aleja al enemigo.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 45 Ki</span>
+
+                <span>⭐ Control: 50</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>FOCUS STRIKE</h2>
+
+            <p>
+              Golpe extremadamente preciso concentrado en un punto débil. +75pts Daño. Ignora parte de la Resistencia.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 50 Ki</span>
+
+                <span>⭐ Control: 70</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="epica">
+
+            <div class="rareza epica">
+                🟪 Épica
+            </div>
+
+            <h2>ENERGY FIELD</h2>
+
+            <p>
+               Crea una zona alrededor del usuario que dificulta ataques enemigos. Reduce precisión o daño enemigo en corto alcance.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 60 Ki</span>
+
+                <span>⭐ Control: 75</span>
+
+            </div>
+
+        </article>
+        <!-- ==================== -->
+        <!-- LEGENDARIA -->
+        <!-- ==================== -->
+
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>KAMEHAMEHA</h2>
+
+            <p>
+                Concentración de Ki en las manos y liberación en forma de rayo masivo. +80pts Daño. Ataque cargable (cada turno de carga +40pts Daño, máx. 2 turnos).
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 400 Ki</span>
+
+                <span>⭐ Control: 500</span>
+
+            </div>
+
+        </article>
+
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>MASENKO</h2>
+
+            <p>
+                Disparo de energía concentrada desde ambas manos sobre la frente. +70pts Daño. Velocidad media, difícil de esquivar a corta distancia. 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 300 Ki</span>
+
+                <span>⭐ Control: 400</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>HEAVENLY BREAKER</h2>
+
+            <p>
+                Impacto concentrado de energía descendente. +100pts Daño. Alto poder de ruptura de defensa.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 200 Ki</span>
+
+                <span>⭐ Control: 250</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>ATOMIC BLAST</h2>
+
+            <p>
+                Explosión de energía en todas direcciones. +110pts Daño. Área de 8 metros.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 300 Ki</span>
+
+                <span>⭐ Control: 400</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>GALICK GUN</h2>
+
+            <p>
+                Rayo de energía púrpura altamente concentrado. +85pts Daño. Puede ser cargado (1 turno +50pts Daño). +70pts Daño. Velocidad media, difícil de esquivar a corta distancia. 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 400 Ki</span>
+
+                <span>⭐ Control: 550</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>FINAL FLASH</h2>
+
+            <p>
+                Explosión de energía comprimida de altísima potencia. +110pts Daño. Tiempo de carga obligatorio de 1 turno.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 1.000 Ki</span>
+
+                <span>⭐ Control: 1.200</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>BIG BANG ATTACK</h2>
+
+            <p>
+                Esfera de energía compacta que explota al contacto. +90pts Daño. Explosión en área (5 metros). 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 400 Ki</span>
+
+                <span>⭐ Control: 800</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>SPECIAL BEAM CANNON</h2>
+
+            <p>
+                Rayo perforante en espiral de alta precisión. +95pts Daño. Ignora parcialmente Resistencia. Tiempo de carga (2 turnos). Insta Kill si conecta en zona peligrosa (Pecho o Cabeza).
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 1.000 Ki</span>
+
+                <span>⭐ Control: 1.200</span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="legendaria">
+
+            <div class="rareza legendaria">
+                🟧 Legendaria
+            </div>
+
+            <h2>DESTRUCTOR DISC</h2>
+
+            <p>
+             Disco de energía cortante extremadamente afilado. +75pts Daño. Puede cortar defensas si impacta directo. 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 250 Ki</span>
+
+                <span>⭐ Control: 900</span>
+
+            </div>
+
+        </article>
+
+        <!-- ==================== -->
+        <!-- MÍTICA -->
+        <!-- ==================== -->
+
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>LIFE TRANSFER</h2>
+
+            <p>
+                El usuario transfiere parte de su Ki y/o HP a otro objetivo aliado mediante contacto directo. Puede transferir hasta un 40% de su Ki o 30% de su HP. El usuario pierde exactamente lo transferido. No puede usarse sobre enemigos sin consentimiento o restricción especial. 
+            </p>
+
+            <div class="datos">
+
                 <span>⚡ Coste: 500 Ki</span>
-                
-                <span>⭐ Control: 600</span>
-                
-                <span>⚔️ +30% Daño</span>
-                
-                <span>🛡️ +20% Resistencia</span>
-                
-                <span>⚡ +15% Velocidad</span>
-                
-                </div>
-                
-                </article>
-                
-                </div>
-                
-                </section>
-                <!--==========================
-                        MONSTRUOS
-                ===========================-->
-                
-                <section class="raza" data-raza="monstruo">
-                
-                    <div class="raza-header">
-                
-                        <h2>🩷 Monstruos</h2>
-                
-                        <p>
-                            Los Monstruos poseen una biología completamente anormal. Son capaces de regenerarse, reconstruir su cuerpo y utilizar extremidades elásticas para combatir desde cualquier distancia.
-                        </p>
-                
-                    </div>
-                
-                    <div class="tecnicas">
-                
-                        <article class="tecnica">
-                
-                            <h3>FLESH REGENERATION</h3>
-                
-                            <p>
-                                El usuario acelera su regeneración natural para recuperar heridas graves durante el combate. Solo puede utilizarse tres veces por combate.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 500 Ki</span>
-                
-                                <span>⭐ Control: 300</span>
-                
-                                <span>❤️ +25% HP</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>ELASTIC LIMBS</h3>
-                
-                            <p>
-                                El usuario estira una extremidad de forma antinatural para alcanzar enemigos a gran distancia.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 150 Ki</span>
-                
-                                <span>⭐ Control: 250</span>
-                
-                                <span>📏 Alcance: +20 metros</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>RECONSTRUCTION</h3>
-                
-                            <p>
-                                Mientras una parte importante del cuerpo permanezca intacta, el monstruo puede reconstruirse completamente.
-                                Solo puede utilizarse una vez por combate.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 600 Ki</span>
-                
-                                <span>⭐ Control: 800</span>
-                
-                                <span>❤️ +50% HP</span>
-                
-                                <span>🔁 1 uso por combate</span>
-                
-                            </div>
-                
-                        </article>
-                
-                    </div>
-                
-                </section>
-                <!--==========================
-                        NAMEKIANOS
-                ===========================-->
-                
-                <section class="raza" data-raza="namek">
-                
-                    <div class="raza-header">
-                
-                        <h2>🟢 Namekianos</h2>
-                
-                        <p>
-                            Los Namekianos son expertos en técnicas de apoyo, regeneración y control del campo de batalla. Sus habilidades combinan resistencia, utilidad y un gran dominio del Ki.
-                        </p>
-                
-                    </div>
-                
-                    <div class="tecnicas">
-                
-                        <article class="tecnica">
-                
-                            <h3>REGENERACIÓN NAMEKUSEIJIN</h3>
-                
-                            <p>
-                                El usuario regenera extremidades o heridas graves utilizando su propia energía vital.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 300 Ki</span>
-                
-                                <span>⭐ Control: 400</span>
-                
-                                <span>❤️ +25% HP</span>
-                
-                                <span>🦾 Recupera miembros perdidos</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>EXTENSIÓN CORPORAL</h3>
-                
-                            <p>
-                                El Namekiano alarga brazos, piernas o cuello para alcanzar enemigos a gran distancia.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 150 Ki</span>
-                
-                                <span>⭐ Control: 250</span>
-                
-                                <span>📏 Alcance: +20 metros</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>NAMEKIAN BIND</h3>
-                
-                            <p>
-                                El usuario extiende sus extremidades para sujetar e inmovilizar al enemigo. Solo funciona si su Resistencia es igual o superior a la del objetivo.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 350 Ki</span>
-                
-                                <span>⭐ Control: 500</span>
-                
-                                <span>⛓️ Inmoviliza 1 turno</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>MYSTIC HEALING</h3>
-                
-                            <p>
-                                Técnica de soporte exclusiva de los Namekianos capaz de restaurar una gran cantidad de energía vital a un aliado mediante contacto físico.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 600 Ki</span>
-                
-                                <span>⭐ Control: 900</span>
-                
-                                <span>❤️ Cura 40% HP a un aliado</span>
-                
-                                <span>🤝 Requiere contacto físico</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>DEMONIC ROAR</h3>
-                
-                            <p>
-                                El usuario libera una poderosa onda de choque mediante un rugido que empuja a todos los enemigos cercanos.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 450 Ki</span>
-                
-                                <span>⭐ Control: 650</span>
-                
-                                <span>⚔️ +120 Daño</span>
-                
-                                <span>💥 Radio: 10 metros</span>
-                
-                            </div>
-                
-                        </article>
-                
-                    </div>
-                
-                </section>
-                <!--==========================
-                        CLAN FREEZA
-                ===========================-->
-                
-               <section class="raza" data-raza="freeza">
-                
-                    <div class="raza-header">
-                
-                        <h2>🟣 Clan Freeza</h2>
-                
-                        <p>
-                            Los miembros del Clan Freeza dominan técnicas de destrucción, control del Ki y ataques extremadamente precisos. Su estilo de combate se basa en la eficiencia, el alcance y un enorme poder ofensivo.
-                        </p>
-                
-                    </div>
-                
-                    <div class="tecnicas">
-                
-                        <article class="tecnica">
-                
-                            <h3>DEATH BEAM</h3>
-                
-                            <p>
-                                El usuario dispara un fino rayo de energía desde un dedo con gran velocidad y precisión.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 150 Ki</span>
-                
-                                <span>⭐ Control: 250</span>
-                
-                                <span>⚔️ +80 Daño</span>
-                
-                                <span>🛡️ Ignora 30% de la Resistencia</span>
-                
-                                <span>🎯 Muy difícil de esquivar</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>DEATH VOLLEY</h3>
-                
-                            <p>
-                                Genera múltiples proyectiles de Ki alrededor del usuario y libera cinco disparos simultáneamente.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 250 Ki</span>
-                
-                                <span>⭐ Control: 350</span>
-                
-                                <span>⚔️ +120 Daño Total</span>
-                
-                                <span>🎯 Puede dividirse entre varios enemigos</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>EMPEROR'S PRESSURE</h3>
-                
-                            <p>
-                                El usuario libera una presión de Ki aterradora que aleja a los enemigos e interrumpe ataques incluso mientras recibe daño.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 300 Ki</span>
-                
-                                <span>⭐ Control: 450</span>
-                
-                                <span>💥 Empuja 10 metros</span>
-                
-                                <span>🔁 Solo una vez por combate</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>SUPERNOVA SPHERE</h3>
-                
-                            <p>
-                                Crea una gigantesca esfera de destrucción capaz de arrasar enormes áreas e incluso destruir un planeta.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 1500 Ki</span>
-                
-                                <span>⭐ Control: 1900</span>
-                
-                                <span>⚔️ +300 Daño</span>
-                
-                                <span>💥 Radio: 50 metros</span>
-                
-                                <span>⚡ +20% Velocidad de ataque</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>PSYCHO CRUSHER</h3>
-                
-                            <p>
-                                El usuario utiliza su Ki para inmovilizar momentáneamente al rival mediante presión mental.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 200 Ki</span>
-                
-                                <span>⭐ Control: 400</span>
-                
-                                <span>⛓️ Paraliza 1 turno</span>
-                
-                                <span>📈 Requiere mayor Control de Ki que el enemigo</span>
-                
-                            </div>
-                
-                        </article>
-                
-                        <article class="tecnica">
-                
-                            <h3>DEATH SAUCER</h3>
-                
-                            <p>
-                                Disco de energía extremadamente afilado controlado mentalmente por el usuario.
-                            </p>
-                
-                            <div class="bonus">
-                
-                                <span>⚡ Coste: 250 Ki</span>
-                
-                                <span>⭐ Control: 500</span>
-                
-                                <span>⚔️ +200 Daño</span>
-                
-                                <span>🪚 Puede cortar objetivos</span>
-                
-                                <span>🧠 Se controla mentalmente</span>
-                
-                            </div>
-                
-                        </article>
-                
-                    </div>
-                
-                </section>
-                
-                </main>
-                
-                <a href="#" class="subir">
-                ↑
-                </a>
-                
-                <footer>
-                
-                Dragon Ball: Dragon's Spirit
-                
-                </footer>
-                </body>
-                </html>
+
+                <span>⭐ Control: 2000</span>
+
+            </div>
+
+        </article>
+
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>GENKI DAMA</h2>
+
+            <p>
+                El usuario reúne energía del entorno para formar una esfera masiva. +695pts Daño. Requiere 2 turnos de carga. No depende solo del Ki del usario. Si es interrumpida, se debilita o falla.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10.000</span>
+
+                <span>⭐ Control: 5.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>KI BIND</h2>
+
+            <p>
+                Cadenas de energía que restringen movimiento del enemigo. Reduce velocidad a 0 durante 1 turno si supera el Control de Ki enemigo.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 10.000</span>
+
+                <span>⭐ Control: 15.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>ENERGY BREAK FIELD</h2>
+
+            <p>
+                Zona de energía que debilita técnicas enemigas dentro del área. Reduce daño enemigo en -25% por 2 turnos.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 15.000</span>
+
+                <span>⭐ Control: 20.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>BODY DUPLICATION</h2>
+
+            <p>
+                Crea copias de Ki con 50% de stats. Cada clon puede actuar independientemente pero dura pocos turnos.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 5.000 c/u</span>
+
+                <span>⭐ Control: 15.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>KI SHOCK WAVE</h2>
+
+            <p>
+                Explosión expansiva de energía. +110pts Daño en área (6 metros). Empuja enemigos y rompe formaciones.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Coste: 2.000 c/u</span>
+
+                <span>⭐ Control: 9.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>FINAL EXPLOSION</h2>
+
+            <p>
+                Explosión de energía en todas direcciones. +650pts Daño. Área de 2km metros. Insta Kill al usuario.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 20.000 Ki</span>
+
+                <span>⭐ Control: N/A </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>KI BLAST STORM</h2>
+
+            <p>
+                Lluvia masiva de explosiones de Ki (50). +85pts Daño c/u. Multi-impacto (puede golpear varias veces).
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 35.000 Ki</span>
+
+                <span>⭐ Control: 40.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>FINAL KAMEHAMEHA</h2>
+
+            <p>
+                Versión extrema del Kamehameha con máxima concentración. +450pts Daño. Requiere carga obligatoria de 1 turno. Cargable hasta 2 turnos (+120 pts)
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 15.000 Ki</span>
+
+                <span>⭐ Control: 25.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>ATOMIC BLAST</h2>
+
+            <p>
+                Explosión de energía en todas direcciones. +110pts Daño. Área de 8 metros. 
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 3.000 Ki</span>
+
+                <span>⭐ Control: 5.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>DRAGON FIST</h2>
+
+            <p>
+                Golpe físico envuelto en energía dracónica. +500% Daño. Prioridad alta en impacto cuerpo a cuerpo.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 40.000 Ki</span>
+
+                <span>⭐ Control: N/A </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza-mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>FINAL BIG BANG</h2>
+
+            <p>
+                Versión perfeccionada del Big Bang Attack, con energía más compacta y explosiva. +290pts Daño. Explosión más violenta (8 metros). Mayor estabilidad en la carga, menos riesgo de dispersión. Requiere carga obligatoria de 1 turno.
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 20.000 Ki</span>
+
+                <span>⭐ Control: 50.000 </span>
+
+            </div>
+
+        </article>
+        <article class="tecnica" data-categoria="mitica">
+
+            <div class="rareza mitica">
+                🔴 Mítica
+            </div>
+
+            <h2>FINAL GALICK GUN</h2>
+
+            <p>
+                Versión mejorada del Galick Gun con compresión extrema de Ki violeta. +470pts Daño. Velocidad superior y mayor penetración. Puede superar defensas de mayor resistencia si conecta directo. Requiere carga obligatoria de 1 turno. Cargable hasta 2 turnos (+100pts Daño)
+            </p>
+
+            <div class="datos">
+
+                <span>⚡ Nesesita: 20.000 Ki</span>
+
+                <span>⭐ Control: 30.000 </span>
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- BOTÓN SUBIR -->
+
+    <a href="#" class="subir">
+        ↑
+    </a>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Dragon Ball: Dragon's Spirit
+
+    </footer>
+
+    <!-- SCRIPT FILTRO -->
+
+    <script>
+
+        const botones = document.querySelectorAll(".categoria");
+        const tecnicas = document.querySelectorAll(".tecnica");
+        const buscador = document.getElementById("buscar");
+
+        let filtroActual = "todas";
+
+        function filtrarTecnicas(){
+
+            const texto = buscador.value.toLowerCase();
+
+            tecnicas.forEach(tecnica=>{
+
+                const categoria = tecnica.dataset.categoria;
+                const nombre = tecnica.querySelector("h2").textContent.toLowerCase();
+                const descripcion = tecnica.querySelector("p").textContent.toLowerCase();
+
+                const coincideCategoria =
+                    filtroActual === "todas" ||
+                    categoria === filtroActual;
+
+                const coincideBusqueda =
+                    nombre.includes(texto) ||
+                    descripcion.includes(texto);
+
+                if(coincideCategoria && coincideBusqueda){
+
+                    tecnica.style.display="block";
+
+                }else{
+
+                    tecnica.style.display="none";
+
+                }
+
+            });
+
+        }
+
+        botones.forEach(boton=>{
+
+            boton.addEventListener("click",()=>{
+
+                botones.forEach(b=>b.classList.remove("activa"));
+                boton.classList.add("activa");
+
+                filtroActual = boton.dataset.filtro;
+
+                filtrarTecnicas();
+
+            });
+
+        });
+
+        buscador.addEventListener("input",filtrarTecnicas);
+
+    </script>
+
+</body>
+
+</html>
