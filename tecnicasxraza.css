@@ -1,6 +1,11 @@
-html{
-    scroll-behavior:smooth;
-}
+/*=========================================================
+            DRAGON BALL: DRAGON'S SPIRIT
+                  TECNICAS.CSS v2.0
+=========================================================*/
+
+/*==========================
+        RESET
+==========================*/
 
 *{
     margin:0;
@@ -8,82 +13,251 @@ html{
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+:root{
+
+    --bg:#070707;
+    --bg2:#101010;
+    --bg3:#191919;
+
+    --gold:#FFD54A;
+    --gold2:#FFC107;
+    --orange:#FF9800;
+
+    --white:#ffffff;
+    --gray:#cfcfcf;
+    --gray2:#8f8f8f;
+
+    --shadow:
+    0 15px 35px rgba(0,0,0,.45);
+
+    --radius:22px;
+
+    --transition:.35s;
+
+}
+
 body{
-    background:#111;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    line-height:1.7;
 
-    border-left:4px solid gold;
-    border-right:4px solid gold;
+    background:
+    radial-gradient(circle at top,#2b1a00 0%,#0d0d0d 40%,#050505 100%);
 
-    box-shadow:
-        inset 0 0 25px rgba(255,215,0,.35);
+    color:white;
+
+    font-family:"Segoe UI",Arial,sans-serif;
 
     overflow-x:hidden;
+
 }
 
 /*==========================
-            HERO
-===========================*/
+        SCROLLBAR
+==========================*/
 
-.hero{
+::-webkit-scrollbar{
 
-    padding:35px 20px;
-
-    text-align:center;
+    width:8px;
 
 }
 
-.hero h1{
+::-webkit-scrollbar-track{
 
-    color:gold;
-
-    font-size:2.2rem;
-
-    text-shadow:
-        0 0 10px gold,
-        0 0 20px orange;
-
-    margin-top:20px;
+    background:#111;
 
 }
 
-.volver{
+::-webkit-scrollbar-thumb{
 
-    display:inline-block;
+    background:var(--gold);
 
-    color:gold;
+    border-radius:50px;
+
+}
+
+/*==========================
+        LINKS
+==========================*/
+
+a{
 
     text-decoration:none;
 
-    border:2px solid gold;
+    color:inherit;
 
-    border-radius:12px;
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*=========================================================
+                    HERO
+=========================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:55vh;
+
+    display:grid;
+
+    place-items:center;
+
+    padding:90px 25px 60px;
+
+    overflow:hidden;
+
+}
+.hero h1{
+
+    margin:0;
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-size:clamp(2.8rem,6vw,4rem);
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,193,7,.18),
+    transparent 70%);
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.hero-contenido{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.icono-principal{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    color:var(--gold);
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,193,7,.18),
+    rgba(255,193,7,.05));
+
+    border:2px solid rgba(255,193,7,.3);
+
+    box-shadow:
+
+    0 0 35px rgba(255,193,7,.2);
+
+}
+.hero p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    max-width:550px;
+
+    margin:auto;
+
+}
+
+/*=========================================================
+                BOTON VOLVER
+=========================================================*/
+
+.volver{
+
+    position:absolute;
+
+    top:25px;
+
+    left:20px;
 
     padding:12px 20px;
 
-    transition:.25s;
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:var(--gold);
+
+    transition:.3s;
 
 }
 
 .volver:hover{
 
-    background:gold;
+    background:var(--gold);
 
     color:#111;
 
 }
 
-/*==========================
-        BUSCADOR
-===========================*/
+/*=========================================================
+                BUSCADOR
+=========================================================*/
 
 .busqueda{
 
-    width:min(1000px,92%);
+    width:100%;
+
+    max-width:800px;
+
     margin:auto;
-    margin-bottom:25px;
+
+    padding:20px;
 
 }
 
@@ -91,77 +265,91 @@ body{
 
     width:100%;
 
-    padding:15px;
+    padding:18px 22px;
 
-    border-radius:12px;
+    border:none;
 
-    border:2px solid rgba(255,215,0,.2);
+    outline:none;
 
-    background:#191919;
+    border-radius:60px;
+
+    background:#181818;
 
     color:white;
 
     font-size:16px;
 
-    outline:none;
+    border:2px solid transparent;
+
+    transition:.3s;
 
 }
 
 .busqueda input:focus{
 
-    border-color:gold;
+    border-color:var(--gold);
+
+    box-shadow:
+
+    0 0 20px rgba(255,193,7,.25);
 
 }
 
-/*==========================
-        FILTROS
-===========================*/
+/*=========================================================
+                CATEGORIAS
+=========================================================*/
 
 .categorias{
 
-    width:min(1000px,92%);
-
-    margin:auto;
-
     display:flex;
 
-    justify-content:center;
+    gap:12px;
 
-    gap:10px;
+    overflow-x:auto;
 
-    flex-wrap:wrap;
+    padding:20px;
 
-    margin-bottom:40px;
+    margin-bottom:30px;
+
+}
+
+.categorias::-webkit-scrollbar{
+
+    display:none;
 
 }
 
 .categoria{
 
+    border:none;
+
     background:#1b1b1b;
 
     color:white;
 
-    border:2px solid rgba(255,215,0,.2);
+    padding:12px 20px;
 
-    padding:12px 18px;
+    border-radius:40px;
 
-    border-radius:12px;
+    white-space:nowrap;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
 
 }
 
 .categoria:hover{
 
-    border-color:gold;
+    background:var(--gold);
+
+    color:#111;
 
 }
 
 .categoria.activa{
 
-    background:gold;
+    background:var(--gold);
 
     color:#111;
 
@@ -169,123 +357,134 @@ body{
 
 }
 
-/*==========================
-        CONTENEDOR
-===========================*/
+/*=========================================================
+            CONTENEDOR
+=========================================================*/
 
-.contenedor-razas{
+.contenedor-tecnicas{
 
-    width:min(1100px,94%);
-
-    margin:auto;
-
-    padding-bottom:70px;
-
-}
-
-/*==========================
-        BLOQUE RAZA
-===========================*/
-
-.raza{
-
-    margin-bottom:70px;
-
-}
-
-.raza-header{
-
-    text-align:center;
-
-    margin-bottom:30px;
-
-}
-
-.raza-header h2{
-
-    color:gold;
-
-    font-size:2rem;
-
-    text-shadow:
-        0 0 10px gold;
-
-    margin-bottom:10px;
-
-}
-
-.raza-header p{
-
-    color:#cfcfcf;
-
-    max-width:850px;
+    max-width:1200px;
 
     margin:auto;
 
-}
-
-/*==========================
-        TARJETAS
-===========================*/
-
-.tecnicas{
+    padding:20px;
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:1fr;
 
-    gap:22px;
+    gap:25px;
 
 }
 
+/*=========================================================
+                TARJETAS
+=========================================================*/
+
 .tecnica{
 
-    background:#191919;
+    background:
 
-    border:2px solid rgba(255,215,0,.15);
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02));
 
-    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
 
-    padding:22px;
+    border-radius:24px;
 
-    transition:.25s;
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
 
 }
 
 .tecnica:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 
-    border-color:gold;
+    border-color:var(--gold);
 
     box-shadow:
-        0 0 15px rgba(255,215,0,.25);
+
+    0 15px 35px rgba(255,193,7,.18);
 
 }
 
-.tecnica h3{
+.tecnica h2{
 
-    color:gold;
+    color:var(--gold);
 
-    margin-bottom:15px;
+    margin:18px 0;
 
-    font-size:1.2rem;
+    font-size:1.7rem;
 
 }
 
 .tecnica p{
 
-    color:#ddd;
+    color:var(--gray);
 
-    margin-bottom:18px;
+    line-height:1.8;
 
 }
 
-/*==========================
-        DATOS
-===========================*/
+/*=========================================================
+                RAREZA
+=========================================================*/
 
-.bonus{
+.rareza{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+.comun{
+
+    background:#444;
+
+}
+
+.rara{
+
+    background:#1565c0;
+
+}
+
+.epica{
+
+    background:#6a1b9a;
+
+}
+
+.legendaria{
+
+    background:#ff9800;
+
+}
+
+.mitica{
+
+    background:#ff0101;
+
+}
+
+/*=========================================================
+                DATOS
+=========================================================*/
+
+.datos{
 
     display:flex;
 
@@ -293,25 +492,66 @@ body{
 
     gap:10px;
 
-}
-
-.bonus span{
-
-    background:#242424;
-
-    border-radius:8px;
-
-    padding:8px 12px;
-
-    border-left:3px solid gold;
-
-    font-size:.95rem;
+    margin:25px 0;
 
 }
 
-/*==========================
-        SUBIR
-===========================*/
+.datos span{
+
+    background:#222;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    color:#ddd;
+
+}
+
+/*=========================================================
+            BOTON VER TECNICA
+=========================================================*/
+
+.ver-tecnica{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--gold),
+    var(--orange));
+
+    color:#111;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ver-tecnica:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 0 20px rgba(255,193,7,.35);
+
+}
+
+/*=========================================================
+                BOTON SUBIR
+=========================================================*/
 
 .subir{
 
@@ -327,122 +567,138 @@ body{
 
     border-radius:50%;
 
-    background:gold;
-
-    color:#111;
-
-    text-decoration:none;
-
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    font-size:24px;
+    background:var(--gold);
 
-    font-weight:bold;
+    color:#111;
 
-    box-shadow:0 0 20px rgba(255,215,0,.4);
+    font-size:22px;
 
-    transition:.25s;
+    box-shadow:var(--shadow);
+
+    transition:.3s;
 
 }
 
 .subir:hover{
 
-    transform:scale(1.08);
+    transform:translateY(-5px);
 
 }
 
-/*==========================
-        FOOTER
-===========================*/
+/*=========================================================
+                    FOOTER
+=========================================================*/
 
 footer{
 
+    margin-top:80px;
+
+    background:#080808;
+
+    border-top:1px solid rgba(255,193,7,.15);
+
     text-align:center;
 
-    padding:25px;
-
-    color:#999;
-
-    border-top:1px solid rgba(255,215,0,.15);
+    padding:50px 20px;
 
 }
 
-/*==========================
-        RESPONSIVE
-===========================*/
+footer p{
 
-@media(max-width:768px){
+    color:var(--gold);
 
-.hero h1{
+    font-size:20px;
 
-    font-size:1.8rem;
+    margin-bottom:10px;
 
 }
 
-.categorias{
+footer small{
 
-    justify-content:flex-start;
-
-    flex-wrap:nowrap;
-
-    overflow-x:auto;
-
-    padding-bottom:6px;
+    color:#888;
 
 }
 
-.categorias::-webkit-scrollbar{
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
 
-    display:none;
+@media(min-width:768px){
 
-}
+    .contenedor-tecnicas{
 
-.categoria{
+        grid-template-columns:repeat(2,1fr);
 
-    white-space:nowrap;
-
-    flex:none;
-
-}
-
-.tecnicas{
-
-    grid-template-columns:1fr;
+    }
 
 }
 
-.raza{
+@media(min-width:1200px){
 
-    margin-bottom:50px;
+    .contenedor-tecnicas{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
 
 }
+.categoria.activa{
 
-.raza-header h2{
+    background:linear-gradient(135deg,#FFD54A,#FF9800);
 
-    font-size:1.6rem;
+    color:#111;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 0 20px rgba(255,213,74,.5);
+
+    transform:translateY(-2px);
 
 }
-
 .tecnica{
 
-    padding:18px;
+    display:block;
+
+    animation: aparecer .3s ease;
+    
 
 }
+@keyframes aparecer{
 
-.bonus{
+    from{
 
-    flex-direction:column;
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
 
 }
-
-.bonus span{
-
-    width:100%;
-
-}
-
+.oculta{
+    display:none !important;
 }
