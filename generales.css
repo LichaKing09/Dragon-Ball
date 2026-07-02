@@ -1,226 +1,486 @@
+/*==========================================
+  FUENTE
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+/*==========================================
+  GENERAL
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
 
-    margin: 0;
+    font-family:'Orbitron',sans-serif;
 
-    border: 10px solid gold;
+    background:
+        linear-gradient(rgba(5,5,10,.92),rgba(5,5,10,.96)),
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80");
 
-    box-shadow:
-        inset 0 0 30px gold,
-        inset 0 0 60px orange;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#eee;
+
 }
 
-/* Portada */
+/*==========================================
+ HERO
+==========================================*/
 
-header{
-    min-height: 100vh;
+.hero{
 
-    padding: 40px;
-    box-sizing: border-box;
+    padding:70px 20px 45px;
+
+    text-align:center;
+
 }
 
-h1{
-    text-align: center;
+.hero h1{
 
-    color: gold;
+    font-size:3rem;
 
-    margin-top: 40px;
-    margin-bottom: 80px;
+    color:#ffb100;
 
     text-shadow:
-        0 0 10px gold,
-        0 0 20px orange;
+        0 0 10px #ff9800,
+        0 0 30px #ff9800;
+
+    margin-bottom:20px;
+
 }
 
-.indice{
-    text-align: left;
+.hero p{
 
-    margin-left: 100px;
+    max-width:900px;
 
-    color: gold;
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#d5d5d5;
+
 }
 
-ul{
-    text-align: left;
+/*==========================================
+ BOTON VOLVER
+==========================================*/
 
-    margin-left: 20px;
-}
+.volver{
 
-li{
-    margin: 100px 0;
-}
+    display:inline-block;
 
-a{
-    color: gold;
-    text-decoration: none;
+    margin-bottom:35px;
 
-    transition: 0.3s;
-}
+    padding:12px 26px;
 
-a:hover{
-    color: orange;
+    border-radius:12px;
 
-    text-shadow:
-        0 0 10px gold;
-}
-.hoja{
-    min-height: 100vh;
+    text-decoration:none;
 
-    padding: 80px;
+    color:white;
 
-    box-sizing: border-box;
-
-    border-top: 2px solid gold;
-
-    scroll-margin-top: 20px;
-}
-
-.hoja h2{
-    text-align: center;
-
-    color: gold;
-
-    margin-bottom: 40px;
-
-    text-shadow:
-        0 0 10px gold;
-}
-
-.hoja p{
-    max-width: 900px;
-
-    margin: auto;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    text-align: justify;
-}
-
-/* Alternar fondos para diferenciar capítulos */
-
-.hoja:nth-child(even){
-    background-color: rgba(255,255,255,0.02);
-}
-.navegacion{
-    margin-top: 60px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-}
-
-.navegacion a{
-    padding: 12px 20px;
-
-    border: 2px solid gold;
-
-    border-radius: 10px;
-
-    color: gold;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-}
-
-.navegacion a:hover{
-    background-color: gold;
-
-    color: black;
-
-    box-shadow: 0 0 15px gold;
-}
-.lista-razas{
-    margin-top: 30px;
-}
-
-.lista-razas > li{
-    list-style: none;
-
-    border-left: 4px solid gold;
-
-    padding-left: 20px;
-
-    margin-bottom: 40px;
-}
-
-.lista-razas h3{
-    color: gold;
-
-    margin-bottom: 15px;
-}
-.transformacion{
-    background:rgba(255,255,255,.03);
-
-    border:2px solid gold;
-
-    border-radius:15px;
-
-    padding:25px;
-
-    margin:25px 0;
+    border:2px solid #ff9800;
 
     transition:.3s;
+
 }
 
-.transformacion:hover{
-    transform:translateY(-5px);
+.volver:hover{
+
+    background:#ff9800;
+
+    color:black;
+
+    box-shadow:0 0 15px #ff9800;
+
+}
+
+/*==========================================
+ BUSCADOR
+==========================================*/
+
+.busqueda{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+}
+
+.busqueda input{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:1rem;
+
+    background:#161616;
+
+    color:white;
+
+    border:2px solid #333;
+
+    transition:.3s;
+
+}
+
+.busqueda input:focus{
+
+    border-color:#ff9800;
+
+    box-shadow:0 0 12px #ff9800;
+
+}
+
+/*==========================================
+ FILTROS
+==========================================*/
+
+.categorias{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin:40px auto;
+
+}
+
+.categoria{
+
+    padding:13px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#1b1b1b;
+
+    color:white;
+
+    font-family:inherit;
+
+    transition:.25s;
+
+}
+
+.categoria:hover{
+
+    background:#ff9800;
+
+    color:black;
+
+}
+
+.categoria.activa{
+
+    background:#ff9800;
+
+    color:black;
+
+    box-shadow:0 0 20px #ff9800;
+
+}
+
+/*==========================================
+ CONTENEDOR
+==========================================*/
+
+.contenedor-tecnicas{
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    gap:35px;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(360px,1fr));
+
+    padding-bottom:70px;
+
+}
+
+/*==========================================
+ TARJETA
+==========================================*/
+
+.tecnica{
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(25,25,25,.96),
+            rgba(13,13,13,.98)
+        );
+
+    border:2px solid #2f2f2f;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.tecnica:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff9800;
 
     box-shadow:
-        0 0 15px gold,
-        0 0 30px orange;
+
+        0 0 25px rgba(255,152,0,.35);
+
 }
 
-.transformacion h4{
-    text-align:center;
+/*==========================================
+ CABECERA CARD
+==========================================*/
 
-    color:gold;
+.tipo{
 
-    font-size:28px;
-}
-
-.transformacion h5{
-    color:orange;
-    margin-top:20px;
-}
-
-.transformacion p{
-    line-height:1.8;
-}
-
-.transformacion ul{
-    line-height:1.8;
-}
-
-.transformacion li{
-    margin-bottom:8px;
-}
-.raza{
-    margin:20px 0;
-}
-
-.raza h3{
-    color:orange;
+    padding:14px;
 
     text-align:center;
 
-    font-size:1.4rem;
+    font-weight:bold;
 
-    margin-bottom:15px;
+    color:white;
+
 }
 
-.raza p{
-    line-height:1.8;
+.basica{
+
+    background:#1976d2;
+
+}
+
+.compleja{
+
+    background:#7b1fa2;
+
+}
+
+.aprendible{
+
+    background:#c62828;
+
+}
+
+/*==========================================
+ TITULO
+==========================================*/
+
+.tecnica h2{
+
+    color:#ffb100;
+
+    text-align:center;
+
+    margin:25px 20px 12px;
+
+    font-size:1.55rem;
+
+}
+
+/*==========================================
+ DESCRIPCION
+==========================================*/
+
+.tecnica p{
+
+    color:#d9d9d9;
+
+    line-height:1.75;
+
+    padding:0 22px;
+
+}
+
+/*==========================================
+ DATOS
+==========================================*/
+
+.datos{
+
+    margin:25px 20px 20px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:#101010;
+
+    border-left:5px solid #ff9800;
+
+    line-height:1.9;
+
+}
+
+.datos span{
+
+    display:block;
+
+}
+
+/*==========================================
+ BOTON SUBIR
+==========================================*/
+
+.subir{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:black;
+
+    text-decoration:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+    box-shadow:0 0 20px #ff9800;
+
+    transition:.3s;
+
+}
+
+.subir:hover{
+
+    transform:scale(1.12);
+
+}
+
+/*==========================================
+ FOOTER
+==========================================*/
+
+footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    color:#aaa;
+
+    border-top:1px solid #222;
+
+    margin-top:40px;
+
+}
+
+/*==========================================
+ OCULTAR
+==========================================*/
+
+.oculta{
+
+    display:none;
+
+}
+
+/*==========================================
+ RESPONSIVE
+==========================================*/
+
+@media(max-width:900px){
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .contenedor-tecnicas{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+
+        padding-top:45px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .categoria{
+
+        width:100%;
+
+    }
+
+    .tecnica h2{
+
+        font-size:1.3rem;
+
+    }
+
+    .datos{
+
+        font-size:.9rem;
+
+    }
+
 }
