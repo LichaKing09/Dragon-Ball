@@ -1,12 +1,11 @@
-/*==========================================
-  FUENTE
-==========================================*/
+/*=========================================================
+            DRAGON BALL: DRAGON'S SPIRIT
+                 GENERALES.CSS v2.0
+=========================================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
-
-/*==========================================
-  GENERAL
-==========================================*/
+/*==========================
+        RESET
+==========================*/
 
 *{
     margin:0;
@@ -18,29 +17,136 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
+:root{
 
-    font-family:'Orbitron',sans-serif;
+    --bg:#070707;
+    --bg2:#101010;
+    --bg3:#191919;
 
-    background:
-        linear-gradient(rgba(5,5,10,.92),rgba(5,5,10,.96)),
-        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80");
+    --gold:#FFD54A;
+    --gold2:#FFC107;
+    --orange:#FF9800;
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+    --white:#ffffff;
+    --gray:#cfcfcf;
+    --gray2:#8f8f8f;
 
-    color:#eee;
+    --shadow:
+        0 15px 35px rgba(0,0,0,.45);
+
+    --radius:22px;
+
+    --transition:.35s;
 
 }
 
-/*==========================================
- HERO
-==========================================*/
+body{
+
+    background:
+    radial-gradient(circle at top,#2b1a00 0%,#0d0d0d 40%,#050505 100%);
+
+    color:white;
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/*==========================
+        SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:50px;
+
+}
+
+/*==========================
+        LINKS
+==========================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*=========================================================
+                    HERO
+=========================================================*/
 
 .hero{
 
-    padding:70px 20px 45px;
+    position:relative;
+
+    min-height:55vh;
+
+    display:grid;
+
+    place-items:center;
+
+    padding:90px 25px 60px;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:
+        radial-gradient(circle,
+        rgba(255,193,7,.18),
+        transparent 70%);
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.hero-contenido{
+
+    position:relative;
+
+    z-index:2;
 
     text-align:center;
 
@@ -48,13 +154,9 @@ body{
 
 .hero h1{
 
-    font-size:3rem;
+    color:var(--gold);
 
-    color:#ffb100;
-
-    text-shadow:
-        0 0 10px #ff9800,
-        0 0 30px #ff9800;
+    font-size:clamp(2.8rem,6vw,4rem);
 
     margin-bottom:20px;
 
@@ -62,324 +164,27 @@ body{
 
 .hero p{
 
-    max-width:900px;
-
-    margin:auto;
+    color:var(--gray);
 
     line-height:1.8;
 
-    color:#d5d5d5;
-
-}
-
-/*==========================================
- BOTON VOLVER
-==========================================*/
-
-.volver{
-
-    display:inline-block;
-
-    margin-bottom:35px;
-
-    padding:12px 26px;
-
-    border-radius:12px;
-
-    text-decoration:none;
-
-    color:white;
-
-    border:2px solid #ff9800;
-
-    transition:.3s;
-
-}
-
-.volver:hover{
-
-    background:#ff9800;
-
-    color:black;
-
-    box-shadow:0 0 15px #ff9800;
-
-}
-
-/*==========================================
- BUSCADOR
-==========================================*/
-
-.busqueda{
-
-    width:min(900px,90%);
+    max-width:700px;
 
     margin:auto;
 
 }
 
-.busqueda input{
+.icono-principal{
 
-    width:100%;
+    width:120px;
 
-    padding:18px;
-
-    border:none;
-
-    border-radius:12px;
-
-    outline:none;
-
-    font-size:1rem;
-
-    background:#161616;
-
-    color:white;
-
-    border:2px solid #333;
-
-    transition:.3s;
-
-}
-
-.busqueda input:focus{
-
-    border-color:#ff9800;
-
-    box-shadow:0 0 12px #ff9800;
-
-}
-
-/*==========================================
- FILTROS
-==========================================*/
-
-.categorias{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-    margin:40px auto;
-
-}
-
-.categoria{
-
-    padding:13px 25px;
-
-    border:none;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    background:#1b1b1b;
-
-    color:white;
-
-    font-family:inherit;
-
-    transition:.25s;
-
-}
-
-.categoria:hover{
-
-    background:#ff9800;
-
-    color:black;
-
-}
-
-.categoria.activa{
-
-    background:#ff9800;
-
-    color:black;
-
-    box-shadow:0 0 20px #ff9800;
-
-}
-
-/*==========================================
- CONTENEDOR
-==========================================*/
-
-.contenedor-tecnicas{
-
-    width:min(1400px,92%);
+    height:120px;
 
     margin:auto;
 
-    display:grid;
-
-    gap:35px;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(360px,1fr));
-
-    padding-bottom:70px;
-
-}
-
-/*==========================================
- TARJETA
-==========================================*/
-
-.tecnica{
-
-    background:
-
-        linear-gradient(
-            180deg,
-            rgba(25,25,25,.96),
-            rgba(13,13,13,.98)
-        );
-
-    border:2px solid #2f2f2f;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    transition:.35s;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.tecnica:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#ff9800;
-
-    box-shadow:
-
-        0 0 25px rgba(255,152,0,.35);
-
-}
-
-/*==========================================
- CABECERA CARD
-==========================================*/
-
-.tipo{
-
-    padding:14px;
-
-    text-align:center;
-
-    font-weight:bold;
-
-    color:white;
-
-}
-
-.basica{
-
-    background:#1976d2;
-
-}
-
-.compleja{
-
-    background:#7b1fa2;
-
-}
-
-.aprendible{
-
-    background:#c62828;
-
-}
-
-/*==========================================
- TITULO
-==========================================*/
-
-.tecnica h2{
-
-    color:#ffb100;
-
-    text-align:center;
-
-    margin:25px 20px 12px;
-
-    font-size:1.55rem;
-
-}
-
-/*==========================================
- DESCRIPCION
-==========================================*/
-
-.tecnica p{
-
-    color:#d9d9d9;
-
-    line-height:1.75;
-
-    padding:0 22px;
-
-}
-
-/*==========================================
- DATOS
-==========================================*/
-
-.datos{
-
-    margin:25px 20px 20px;
-
-    padding:18px;
-
-    border-radius:14px;
-
-    background:#101010;
-
-    border-left:5px solid #ff9800;
-
-    line-height:1.9;
-
-}
-
-.datos span{
-
-    display:block;
-
-}
-
-/*==========================================
- BOTON SUBIR
-==========================================*/
-
-.subir{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:58px;
-
-    height:58px;
+    margin-bottom:25px;
 
     border-radius:50%;
-
-    background:#ff9800;
-
-    color:black;
-
-    text-decoration:none;
 
     display:flex;
 
@@ -387,100 +192,294 @@ body{
 
     align-items:center;
 
-    font-size:1.5rem;
+    font-size:60px;
 
-    font-weight:bold;
+    color:var(--gold);
 
-    box-shadow:0 0 20px #ff9800;
+    background:
+        linear-gradient(
+        145deg,
+        rgba(255,193,7,.18),
+        rgba(255,193,7,.05));
+
+    border:2px solid rgba(255,193,7,.3);
+
+    box-shadow:
+        0 0 35px rgba(255,193,7,.2);
+
+}
+
+/*=========================================================
+                BOTON VOLVER
+=========================================================*/
+
+.volver{
+
+    position:absolute;
+
+    top:25px;
+
+    left:20px;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:var(--gold);
 
     transition:.3s;
 
 }
 
-.subir:hover{
+.volver:hover{
 
-    transform:scale(1.12);
+    background:var(--gold);
 
-}
-
-/*==========================================
- FOOTER
-==========================================*/
-
-footer{
-
-    text-align:center;
-
-    padding:35px;
-
-    color:#aaa;
-
-    border-top:1px solid #222;
-
-    margin-top:40px;
+    color:#111;
 
 }
 
-/*==========================================
- OCULTAR
-==========================================*/
+/*=========================================================
+                BUSCADOR
+=========================================================*/
 
-.oculta{
+.busqueda{
+
+    width:100%;
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+.busqueda input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:60px;
+
+    background:#181818;
+
+    color:white;
+
+    font-size:16px;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+}
+
+.busqueda input:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 20px rgba(255,193,7,.25);
+
+}
+
+/*=========================================================
+                CATEGORIAS
+=========================================================*/
+
+.categorias{
+
+    display:flex;
+
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+    margin-bottom:30px;
+
+}
+
+.categorias::-webkit-scrollbar{
 
     display:none;
 
 }
 
-/*==========================================
- RESPONSIVE
-==========================================*/
+.categoria{
 
-@media(max-width:900px){
+    border:none;
 
-    .hero h1{
+    background:#1b1b1b;
 
-        font-size:2.4rem;
+    color:white;
 
-    }
+    padding:12px 20px;
 
-    .contenedor-tecnicas{
+    border-radius:40px;
 
-        grid-template-columns:1fr;
+    white-space:nowrap;
 
-    }
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
-@media(max-width:600px){
+.categoria:hover{
 
-    .hero{
+    background:var(--gold);
 
-        padding-top:45px;
+    color:#111;
 
-    }
+}
 
-    .hero h1{
+.categoria.activa{
 
-        font-size:2rem;
+    background:linear-gradient(135deg,#FFD54A,#FF9800);
 
-    }
+    color:#111;
 
-    .categoria{
+    font-weight:bold;
 
-        width:100%;
+    box-shadow:
+        0 0 20px rgba(255,213,74,.5);
 
-    }
+    transform:translateY(-2px);
 
-    .tecnica h2{
+}
 
-        font-size:1.3rem;
+/*=========================================================
+            CONTENEDOR
+=========================================================*/
 
-    }
+.contenedor-tecnicas{
 
-    .datos{
+    max-width:1200px;
 
-        font-size:.9rem;
+    margin:auto;
 
-    }
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+/*=========================================================
+                TARJETAS
+=========================================================*/
+
+.tecnica{
+
+    display:block;
+
+    background:
+        linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+    animation:aparecer .35s ease;
+
+}
+
+.tecnica:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(255,193,7,.18);
+
+}
+
+.tecnica h2{
+
+    color:var(--gold);
+
+    margin:18px 0;
+
+    font-size:1.7rem;
+
+}
+
+.tecnica h3{
+
+    color:var(--gold);
+
+    font-size:1.3rem;
+
+    margin-bottom:18px;
+
+    line-height:1.4;
+
+}
+
+.tecnica p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+
+.tecnica ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.tecnica ul li{
+
+    margin-bottom:12px;
+
+    color:#ddd;
+
+    padding-left:18px;
+
+    position:relative;
+
+}
+
+.tecnica ul li::before{
+
+    content:"▸";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
 
 }
