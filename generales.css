@@ -483,3 +483,309 @@ img{
     color:var(--gold);
 
 }
+/*=========================================================
+                TIPO DE TÉCNICA
+=========================================================*/
+
+.tipo{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+.basica{
+
+    background:#1565c0;
+
+    color:white;
+
+}
+
+.compleja{
+
+    background:#6a1b9a;
+
+    color:white;
+
+}
+
+.aprendible{
+
+    background:#c62828;
+
+    color:white;
+
+}
+
+/*=========================================================
+                    DATOS
+=========================================================*/
+
+.datos{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.datos span{
+
+    background:#222;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    color:#ddd;
+
+}
+
+/*=========================================================
+                LISTAS
+=========================================================*/
+
+.tecnica ul{
+
+    margin-top:20px;
+
+    list-style:none;
+
+}
+
+.tecnica ul li{
+
+    position:relative;
+
+    padding-left:20px;
+
+    margin-bottom:12px;
+
+    color:#ddd;
+
+    line-height:1.7;
+
+}
+
+.tecnica ul li::before{
+
+    content:"▸";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
+
+    font-weight:bold;
+
+}
+
+/*=========================================================
+            BOTON VER TÉCNICA
+=========================================================*/
+
+.ver-tecnica{
+
+    width:100%;
+
+    margin-top:25px;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+        135deg,
+        var(--gold),
+        var(--orange));
+
+    color:#111;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ver-tecnica:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(255,193,7,.35);
+
+}
+
+/*=========================================================
+                BOTÓN SUBIR
+=========================================================*/
+
+.subir{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-size:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.subir:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================================
+                    FOOTER
+=========================================================*/
+
+footer{
+
+    margin-top:80px;
+
+    background:#080808;
+
+    border-top:1px solid rgba(255,193,7,.15);
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+footer p{
+
+    color:var(--gold);
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+footer small{
+
+    color:#888;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(min-width:768px){
+
+    .contenedor-tecnicas{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(min-width:1200px){
+
+    .contenedor-tecnicas{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+}
+
+/*=========================================================
+                ANIMACIONES
+=========================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+.tecnica{
+
+    animation:aparecer .35s ease;
+
+}
+
+/*=========================================================
+                OCULTAR
+=========================================================*/
+
+.oculta{
+
+    display:none !important;
+
+}
